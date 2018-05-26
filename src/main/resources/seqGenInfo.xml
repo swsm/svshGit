@@ -2,229 +2,229 @@
 <!--  各种业务表编号生成配置文件  -->
 <!--  日期格式参考:年yyyy月MM日dd时HH分mm秒ss  -->
 <map>
-	<!--  入库检验单编号  -->
-	<!--  生成规则 FQC(字母)＋日期(yyyyMMdd)+流水号(3位)  -->
-	<entry>
-		<string>TT_QM_FQC</string>
-		<seqGenInfo>
-			<tableName>TT_QM_FQC</tableName>
-			<fieldName>FQC_NO</fieldName>
-			<prefix>FQC-</prefix>
-			<hasSecondCode>false</hasSecondCode>
-			<dateMask>yyyyMMdd</dateMask>
-			<loop>yyyyMMdd</loop>
-			<seperator></seperator>
-			<seqLength>3</seqLength>
-		</seqGenInfo>
-	</entry>
-	<!-- 补料单编号 -->
-	<!--  生成规则YCLBL(字母)＋日期(yyyyMMdd)流水号(3位)  -->
-	<!--  形如 YCLBL-20151203-007  -->
-	<entry>
-		<string>TT_MP_SUPPLEMENT</string>
-		<seqGenInfo>
-			<tableName>TT_MP_SUPPLEMENT</tableName>
-			<fieldName>SUPPLEMENT_LIST</fieldName>
-			<prefix></prefix>
-			<hasSecondCode>true</hasSecondCode>
-			<dateMask>yyyyMMdd</dateMask>
-			<loop>yyyyMMdd</loop>
-			<seperator></seperator>
-			<seqLength>3</seqLength>
-		</seqGenInfo>
-	</entry>
-	<!-- 调批单编号 -->
-	<!--  生成规则YCLTP(字母)＋日期(yyyyMMdd)流水号(3位)  -->
-	<!--  形如 YCLTP-20151203-007  -->
-	<entry>
-		<string>TT_MP_ADJUSTMENT</string>
-		<seqGenInfo>
-			<tableName>TT_MP_ADJUSTMENT</tableName>
-			<fieldName>ADJUSTMENT_LIST</fieldName>
-			<prefix></prefix>
-			<hasSecondCode>true</hasSecondCode>
-			<dateMask>yyyyMMdd</dateMask>
-			<loop>yyyyMMdd</loop>
-			<seperator></seperator>
-			<seqLength>3</seqLength>
-		</seqGenInfo>
-	</entry>
-	<!--  退料单编号  -->
-	<!--  生成规则TLYCL(字母)＋日期(yyyyMMdd)流水号(3位)  -->
-	<!--  形如 TL-20151203-007  -->
-	<entry>
-		<string>TT_MP_RETURN</string>
-		<seqGenInfo>
-			<tableName>TT_MP_RETURN</tableName>
-			<fieldName>RETURN_LIST</fieldName>
-			<prefix></prefix>
-			<hasSecondCode>true</hasSecondCode>
-			<dateMask>yyyyMMdd</dateMask>
-			<loop>yyyyMMdd</loop>
-			<seperator></seperator>
-			<seqLength>3</seqLength>
-		</seqGenInfo>
-	</entry>
-	
-	<!--  原材料领料单编号  -->
-	<!--  生成规则:二级类别＋日期(yyyyMMdd)+流水号(3位)  -->
-	<!--  形如YCLLL-20160812001  -->
-	<entry>
-		<string>TT_MP_PICKING</string>
-		<seqGenInfo>
-			<tableName>TT_MP_PICKING</tableName>
-			<fieldName>PICKING_LIST</fieldName>
-			<prefix></prefix>
-			<hasSecondCode>true</hasSecondCode>
-			<dateMask>yyyyMMdd</dateMask>
-			<loop>yyyyMMdd</loop>
-			<seperator></seperator>
-			<seqLength>3</seqLength>
-		</seqGenInfo>
-	</entry>
-	
-	<!--  生产批次号  -->
-	<!--  生成规则:日期(yyMMdd)+按loop的流水号(2位)，无中横线  -->
-	<!--  形如15113001  -->
-	<entry>
-		<string>TT_WO_BATCH</string>
-		<seqGenInfo>
-			<tableName>TT_WO_BATCH</tableName>
-			<fieldName>BATCH_NO</fieldName>
-			<prefix></prefix>
-			<hasSecondCode>false</hasSecondCode>
-			<dateMask>yyMMdd</dateMask>
-			<loop>yyyyMM</loop>
-			<seperator></seperator>
-			<seqLength>2</seqLength>
-		</seqGenInfo>
-	</entry>
-	<!--  WIP批次号  -->
-	<!--  生成规则前缀(无)+(yyyyMddZJ)＋+按loop的流水号(3位)，无中横线  -->
-	<!--  形如2015930ZJ001  -->
-	<entry>
-		<string>TT_WO_WIP</string>
-		<seqGenInfo>
-			<tableName>TT_WO_WIP</tableName>
-			<fieldName>LOT_NO</fieldName>
-			<prefix></prefix>
-			<hasSecondCode>true</hasSecondCode>
-			<dateMask></dateMask>
-			<loop></loop>
-			<seperator></seperator>
-			<seqLength>3</seqLength>
-		</seqGenInfo>
-	</entry>
-	<!--  生产工单号  -->
-	<!-- 生产批次号+工序标识符+两位流水 按loop的流水号(2位)，无中横线  -->
-	<!--  形如ASC15120421FQ01  -->
-	<entry>
-		<string>TT_WO_ORDER</string>
-		<seqGenInfo>
-			<tableName>TT_WO_ORDER</tableName>
-			<fieldName>ORDER_NO</fieldName>
-			<prefix></prefix>
-			<hasSecondCode>true</hasSecondCode>
-			<dateMask></dateMask>
-			<loop></loop>
-			<seperator></seperator>
-			<seqLength>2</seqLength>
-		</seqGenInfo>
-	</entry>
-	<!--  退货单号  -->
-	<!--  TH+yyyyMMDD+三位流水 按loop的流水号(3位)，无中横线  -->
-	<!--  形如TH-20151204-001  -->
-	<entry>
-		<string>TT_M_REJECTION</string>
-		<seqGenInfo>
-			<tableName>TT_M_REJECTION</tableName>
-			<fieldName>REJECTION_LIST</fieldName>
-			<prefix>TH-</prefix>
-			<hasSecondCode>false</hasSecondCode>
-			<dateMask>yyyyMMdd</dateMask>
-			<loop>yyyyMMdd</loop>
-			<seperator></seperator>
-			<seqLength>3</seqLength>
-		</seqGenInfo>
-	</entry>
-	<!--  报废单号  -->
-	<!--  BF+yyyyMMDD+三位流水 按loop的流水号(3位)，无中横线  -->
-	<!--  形如BF-20151204-001  -->
-	<entry>
-		<string>TT_WO_SCRAP</string>
-		<seqGenInfo>
-			<tableName>TT_WO_SCRAP</tableName>
-			<fieldName>SCRAP_LIST</fieldName>
-			<prefix>BF-</prefix>
-			<hasSecondCode>false</hasSecondCode>
-			<dateMask>yyyyMMdd</dateMask>
-			<loop>yyyyMMdd</loop>
-			<seperator></seperator>
-			<seqLength>3</seqLength>
-		</seqGenInfo>
-	</entry>
-	<!--  原材料，半成品，备件入库单号  -->
-	<!--  生成规则 RK(字母)+二级类别＋日期(yyyyMMdd)+流水号(3位)  -->
-	<!--  形如RK-YCL-20151130-001  -->
-	<entry>
-		<string>TT_M_IN</string>
-		<seqGenInfo>
-			<tableName>TT_M_IN</tableName>
-			<fieldName>IN_LIST</fieldName>
-			<prefix>RK</prefix>
-			<hasSecondCode>true</hasSecondCode>
-			<dateMask>yyyyMMdd</dateMask>
-			<loop>yyyyMMdd</loop>
-			<seperator></seperator>
-			<seqLength>3</seqLength>
-		</seqGenInfo>
-	</entry>
-	<!--  转移单号  -->
-	<!--  ZYYCL+yyyyMMDD+三位流水 按loop的流水号(3位)，无中横线  -->
-	<!--  形如ZYYCL-20151204001  -->
-	<entry>
-		<string>TT_M_TRANSFER</string>
-		<seqGenInfo>
-			<tableName>TT_M_TRANSFER</tableName>
-			<fieldName>TRANSFER_LIST</fieldName>
-			<prefix>ZYYCL-</prefix>
-			<hasSecondCode>false</hasSecondCode>
-			<dateMask>yyyyMMdd</dateMask>
-			<loop>yyyyMMdd</loop>
-			<seperator></seperator>
-			<seqLength>3</seqLength>
-		</seqGenInfo>
-	</entry>
-	<!--  记录编码  -->
-	<!--  生成规则:日期(yyyyMMdd)+按loop的流水号(2位)，无中横线  -->
-	<!--  形如2016083001  -->
-	<entry>
-		<string>TT_QM_SALESAFTER</string>
-		<seqGenInfo>
-			<tableName>TT_QM_SALESAFTER</tableName>
-			<fieldName>RECORD_CODE</fieldName>
-			<prefix></prefix>
-			<hasSecondCode>false</hasSecondCode>
-			<dateMask>yyyyMMdd</dateMask>
-			<loop>yyyyMMdd</loop>
-			<seperator></seperator>
-			<seqLength>2</seqLength>
-		</seqGenInfo>
-	</entry>
-	<!--  PACK生产计划的计划编码  -->
-	<!--  生成规则:日期(yyyyMMdd)+流水号(2位)，无中横线  -->
-	<!--  形如2016101001  -->
-	<entry>
-		<string>TT_WO_PACK_PLAN</string>
-		<seqGenInfo>
-			<tableName>TT_WO_PACK_PLAN</tableName>
-			<fieldName>PLAN_NO</fieldName>
-			<prefix></prefix>
-			<hasSecondCode>false</hasSecondCode>
-			<dateMask>yyyyMMdd</dateMask>
-			<loop>yyyyMM</loop>
-			<seperator></seperator>
-			<seqLength>2</seqLength>
-		</seqGenInfo>
-	</entry>
+    <!--  入库检验单编号  -->
+    <!--  生成规则 FQC(字母)＋日期(yyyyMMdd)+流水号(3位)  -->
+    <entry>
+        <string>TT_QM_FQC</string>
+        <seqGenInfo>
+            <tableName>TT_QM_FQC</tableName>
+            <fieldName>FQC_NO</fieldName>
+            <prefix>FQC-</prefix>
+            <hasSecondCode>false</hasSecondCode>
+            <dateMask>yyyyMMdd</dateMask>
+            <loop>yyyyMMdd</loop>
+            <seperator></seperator>
+            <seqLength>3</seqLength>
+        </seqGenInfo>
+    </entry>
+    <!-- 补料单编号 -->
+    <!--  生成规则YCLBL(字母)＋日期(yyyyMMdd)流水号(3位)  -->
+    <!--  形如 YCLBL-20151203-007  -->
+    <entry>
+        <string>TT_MP_SUPPLEMENT</string>
+        <seqGenInfo>
+            <tableName>TT_MP_SUPPLEMENT</tableName>
+            <fieldName>SUPPLEMENT_LIST</fieldName>
+            <prefix></prefix>
+            <hasSecondCode>true</hasSecondCode>
+            <dateMask>yyyyMMdd</dateMask>
+            <loop>yyyyMMdd</loop>
+            <seperator></seperator>
+            <seqLength>3</seqLength>
+        </seqGenInfo>
+    </entry>
+    <!-- 调批单编号 -->
+    <!--  生成规则YCLTP(字母)＋日期(yyyyMMdd)流水号(3位)  -->
+    <!--  形如 YCLTP-20151203-007  -->
+    <entry>
+        <string>TT_MP_ADJUSTMENT</string>
+        <seqGenInfo>
+            <tableName>TT_MP_ADJUSTMENT</tableName>
+            <fieldName>ADJUSTMENT_LIST</fieldName>
+            <prefix></prefix>
+            <hasSecondCode>true</hasSecondCode>
+            <dateMask>yyyyMMdd</dateMask>
+            <loop>yyyyMMdd</loop>
+            <seperator></seperator>
+            <seqLength>3</seqLength>
+        </seqGenInfo>
+    </entry>
+    <!--  退料单编号  -->
+    <!--  生成规则TLYCL(字母)＋日期(yyyyMMdd)流水号(3位)  -->
+    <!--  形如 TL-20151203-007  -->
+    <entry>
+        <string>TT_MP_RETURN</string>
+        <seqGenInfo>
+            <tableName>TT_MP_RETURN</tableName>
+            <fieldName>RETURN_LIST</fieldName>
+            <prefix></prefix>
+            <hasSecondCode>true</hasSecondCode>
+            <dateMask>yyyyMMdd</dateMask>
+            <loop>yyyyMMdd</loop>
+            <seperator></seperator>
+            <seqLength>3</seqLength>
+        </seqGenInfo>
+    </entry>
+
+    <!--  原材料领料单编号  -->
+    <!--  生成规则:二级类别＋日期(yyyyMMdd)+流水号(3位)  -->
+    <!--  形如YCLLL-20160812001  -->
+    <entry>
+        <string>TT_MP_PICKING</string>
+        <seqGenInfo>
+            <tableName>TT_MP_PICKING</tableName>
+            <fieldName>PICKING_LIST</fieldName>
+            <prefix></prefix>
+            <hasSecondCode>true</hasSecondCode>
+            <dateMask>yyyyMMdd</dateMask>
+            <loop>yyyyMMdd</loop>
+            <seperator></seperator>
+            <seqLength>3</seqLength>
+        </seqGenInfo>
+    </entry>
+
+    <!--  生产批次号  -->
+    <!--  生成规则:日期(yyMMdd)+按loop的流水号(2位)，无中横线  -->
+    <!--  形如15113001  -->
+    <entry>
+        <string>TT_WO_BATCH</string>
+        <seqGenInfo>
+            <tableName>TT_WO_BATCH</tableName>
+            <fieldName>BATCH_NO</fieldName>
+            <prefix></prefix>
+            <hasSecondCode>false</hasSecondCode>
+            <dateMask>yyMMdd</dateMask>
+            <loop>yyyyMM</loop>
+            <seperator></seperator>
+            <seqLength>2</seqLength>
+        </seqGenInfo>
+    </entry>
+    <!--  WIP批次号  -->
+    <!--  生成规则前缀(无)+(yyyyMddZJ)＋+按loop的流水号(3位)，无中横线  -->
+    <!--  形如2015930ZJ001  -->
+    <entry>
+        <string>TT_WO_WIP</string>
+        <seqGenInfo>
+            <tableName>TT_WO_WIP</tableName>
+            <fieldName>LOT_NO</fieldName>
+            <prefix></prefix>
+            <hasSecondCode>true</hasSecondCode>
+            <dateMask></dateMask>
+            <loop></loop>
+            <seperator></seperator>
+            <seqLength>3</seqLength>
+        </seqGenInfo>
+    </entry>
+    <!--  生产工单号  -->
+    <!-- 生产批次号+工序标识符+两位流水 按loop的流水号(2位)，无中横线  -->
+    <!--  形如ASC15120421FQ01  -->
+    <entry>
+        <string>TT_WO_ORDER</string>
+        <seqGenInfo>
+            <tableName>TT_WO_ORDER</tableName>
+            <fieldName>ORDER_NO</fieldName>
+            <prefix></prefix>
+            <hasSecondCode>true</hasSecondCode>
+            <dateMask></dateMask>
+            <loop></loop>
+            <seperator></seperator>
+            <seqLength>2</seqLength>
+        </seqGenInfo>
+    </entry>
+    <!--  退货单号  -->
+    <!--  TH+yyyyMMDD+三位流水 按loop的流水号(3位)，无中横线  -->
+    <!--  形如TH-20151204-001  -->
+    <entry>
+        <string>TT_M_REJECTION</string>
+        <seqGenInfo>
+            <tableName>TT_M_REJECTION</tableName>
+            <fieldName>REJECTION_LIST</fieldName>
+            <prefix>TH-</prefix>
+            <hasSecondCode>false</hasSecondCode>
+            <dateMask>yyyyMMdd</dateMask>
+            <loop>yyyyMMdd</loop>
+            <seperator></seperator>
+            <seqLength>3</seqLength>
+        </seqGenInfo>
+    </entry>
+    <!--  报废单号  -->
+    <!--  BF+yyyyMMDD+三位流水 按loop的流水号(3位)，无中横线  -->
+    <!--  形如BF-20151204-001  -->
+    <entry>
+        <string>TT_WO_SCRAP</string>
+        <seqGenInfo>
+            <tableName>TT_WO_SCRAP</tableName>
+            <fieldName>SCRAP_LIST</fieldName>
+            <prefix>BF-</prefix>
+            <hasSecondCode>false</hasSecondCode>
+            <dateMask>yyyyMMdd</dateMask>
+            <loop>yyyyMMdd</loop>
+            <seperator></seperator>
+            <seqLength>3</seqLength>
+        </seqGenInfo>
+    </entry>
+    <!--  原材料，半成品，备件入库单号  -->
+    <!--  生成规则 RK(字母)+二级类别＋日期(yyyyMMdd)+流水号(3位)  -->
+    <!--  形如RK-YCL-20151130-001  -->
+    <entry>
+        <string>TT_M_IN</string>
+        <seqGenInfo>
+            <tableName>TT_M_IN</tableName>
+            <fieldName>IN_LIST</fieldName>
+            <prefix>RK</prefix>
+            <hasSecondCode>true</hasSecondCode>
+            <dateMask>yyyyMMdd</dateMask>
+            <loop>yyyyMMdd</loop>
+            <seperator></seperator>
+            <seqLength>3</seqLength>
+        </seqGenInfo>
+    </entry>
+    <!--  转移单号  -->
+    <!--  ZYYCL+yyyyMMDD+三位流水 按loop的流水号(3位)，无中横线  -->
+    <!--  形如ZYYCL-20151204001  -->
+    <entry>
+        <string>TT_M_TRANSFER</string>
+        <seqGenInfo>
+            <tableName>TT_M_TRANSFER</tableName>
+            <fieldName>TRANSFER_LIST</fieldName>
+            <prefix>ZYYCL-</prefix>
+            <hasSecondCode>false</hasSecondCode>
+            <dateMask>yyyyMMdd</dateMask>
+            <loop>yyyyMMdd</loop>
+            <seperator></seperator>
+            <seqLength>3</seqLength>
+        </seqGenInfo>
+    </entry>
+    <!--  记录编码  -->
+    <!--  生成规则:日期(yyyyMMdd)+按loop的流水号(2位)，无中横线  -->
+    <!--  形如2016083001  -->
+    <entry>
+        <string>TT_QM_SALESAFTER</string>
+        <seqGenInfo>
+            <tableName>TT_QM_SALESAFTER</tableName>
+            <fieldName>RECORD_CODE</fieldName>
+            <prefix></prefix>
+            <hasSecondCode>false</hasSecondCode>
+            <dateMask>yyyyMMdd</dateMask>
+            <loop>yyyyMMdd</loop>
+            <seperator></seperator>
+            <seqLength>2</seqLength>
+        </seqGenInfo>
+    </entry>
+    <!--  PACK生产计划的计划编码  -->
+    <!--  生成规则:日期(yyyyMMdd)+流水号(2位)，无中横线  -->
+    <!--  形如2016101001  -->
+    <entry>
+        <string>TT_WO_PACK_PLAN</string>
+        <seqGenInfo>
+            <tableName>TT_WO_PACK_PLAN</tableName>
+            <fieldName>PLAN_NO</fieldName>
+            <prefix></prefix>
+            <hasSecondCode>false</hasSecondCode>
+            <dateMask>yyyyMMdd</dateMask>
+            <loop>yyyyMM</loop>
+            <seperator></seperator>
+            <seqLength>2</seqLength>
+        </seqGenInfo>
+    </entry>
 </map>
