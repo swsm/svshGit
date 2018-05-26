@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-08-24 15:22:51
+ * @version $Id$
+ */
+/*login*/
+.box_panel{min-width:1200px;background:url(images/background-v3.1.png) 0px 100px no-repeat rgb(255,255,255);position:ralative;background-size: 100% 600px;}
+.login_main{width:1200px;height:849px;margin:0 auto;}
+.login_head{width:100%;height:100px;}
+.login_body{height:600px;}
+.box_login{width:344px;height:358px;/* box-shadow:0px 0px 10px 1px rgb(159, 161, 162); */background:rgb(255,255,255);
+behavior:url(styles/default/PIE.htc);float:right;top:88px;right:54px; position:relative;/*margin-left:-235px;margin-top:-190px; */}
+.login_title{height:96px;background:rgb(255,255,255);position:relative;}
+.login_logo{width:320px;height:60px;background:url(images/logo-v3.1.png) no-repeat;background-size: contain;float:left;margin:30px 0 0 20px;}
+.login_oper{width:120px;height:98px;background:url(images/icon_chilun.png);position:absolute;right:-40px;top:-50px;}
+.login_switcher li{text-align: center;width: 45%;font-size:18px;float:left;color: #8e8e8e;line-height:96px;height:100%;}
+.login_switcher a{display: block; width: 100%;cursor: pointer;font-size: 18px}
+/* .login_content{padding-top:50px;} */
+.login_card_content{padding-top:48px;}
+
+.box_input{position:relative;width:296px;height:44px;margin:auto auto 24px auto;border:1px solid #dddddd}
+.span_icon{display:block;width:42px;height:44px;position:absolute;left:10px;}
+.icon_name{background:url(images/ico_user.png) center no-repeat /* rgb(82,165,195) */;}
+.icon_code{background:url(images/ico_password.png) center no-repeat /* rgb(82,165,195) */;}
+.ico_card{background:url(images/ico_card.png) center no-repeat;}
+.span_ico{display:block;position:absolute;background:url(images/ico_del.png) center no-repeat; width:20px; height:44px;right:10px;cursor: pointer;}
+.input_content{ padding:0px 25px; background:rgb(255,255,255);margin:0px 30px 0px 50px;color:#7c7c7c}
+.box_login_btn{width:100%;/* margin:auto; */padding-top:24px;text-align:center;position:relative;}
+.text_tip{position:absolute;top:0;left:0;width:100%;font-size:18px;margin-top: -10px;color:rgb(233,80,69);display:none;}
+.text_card_tip{position:absolute;top:0;left:0;width:100%;font-size:18px;margin-top:8px;color:rgb(233,80,69);display:none;}
+.footer{/* border-top:6px solid rgb(255,224,155);margin-top:2px; */height:149px;background-color:rgb(255,255,255);}
+.copyright{line-height:100px;font-weight:bold;color:#000000;font-size:18px;text-align:center;}
+/*index*/
+/*header*/
+.header{height:48px;min-width:960px;background:url(images/bg_header.jpg) right center no-repeat rgb(152,173,199);}
+.box_header_logo{width:384px;height:48px;line-height:48px;color:rgb(239,239,239);font-size:24px;background:url(images/logo.png) 28px center no-repeat;float:left;}
+.user_info{float:right;background:url(images/bg_info.png) left top no-repeat;width:426px;height:48px;padding-left:50px;padding-top:8px;}
+.user_info span{cursor:pointer;font-size:11px;color:rgb(82,102,129);padding:5px 30px;float:left;display:block;}
+span.cur_user{background:url(images/icon_user.png) 25px center no-repeat;padding-left:50px;}
+span.refresh{background:url(images/icon_refresh.png) center no-repeat;margin-left:20px;height:30px;width:40px;padding:0;}
+span.logout{background:url(images/icon_logout.png) center no-repeat;height:30px;width:40px;padding:0;}
+span.line{width:2px;padding:5px 0;color:rgb(173,190,214);}
+/*nav*/
+.nav{padding-top:10px;}
+.nav_content li{line-height:37px;background:url(images/icon_traingle.png) right 15px no-repeat;color:rgb(82,165,195);cursor:pointer;border-top:1px solid rgb(247,247,247);}
+.nav_content li.current{background:url(images/icon_traingle_down.png) right 15px no-repeat rgb(82,165,195);color:rgb(255,255,255);border-top:1px solid rgb(75,150,178);}
+.open_sub{display:block;height:36px;line-height:36px;font-size:14px;border-top:1px solid rgb(247,247,247);}
+
+.ziliao{background:url(images/icon_quote.png) 20px no-repeat;padding-left:45px;}
+.nav_content li.current .ziliao{background:url(images/icon_quote_ov.png) 20px no-repeat;border-top:1px solid rgb(79,160,189);}
+.basic{background:url(images/icon_basicdata.png) 20px no-repeat;padding-left:45px;}
+.nav_content li.current .basic{background:url(images/icon_basicdata_ov.png) 20px no-repeat;border-top:1px solid rgb(79,160,189);}
+
+.nav_sub{display:none;}
+.nav_sub li{line-height:37px;border-top:none;}
+.nav_sub li a{display:block;color:rgb(255,255,255);padding-left:60px;font-size:14px;}
+.nav_sub li.current{background:none;border-top:none;}
+.nav_sub li.current a{background:url(images/icon_traingle.png) 45px center no-repeat rgb(206,226,223);color:rgb(82,165,195);}

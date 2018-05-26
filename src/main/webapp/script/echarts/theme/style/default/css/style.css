@@ -1,0 +1,395 @@
+@charset "utf-8";
+
+html,body{height:100%;overflow:;margin:0px;	font-family:'微软雅黑'}
+
+
+/**********
+	publick color
+	b_ -----> background
+	c_ -----> color
+
+
+***********/
+
+.b_Purple{
+	background-color:rgb(164,138,212);
+}
+
+.b_green{
+	background-color:rgb(84,189,182);
+}
+
+.b_blue{
+	background-color:rgb(85,171,255);
+}
+
+
+
+.c_Purple{
+	color:rgb(164,138,212);
+}
+
+.c_gray{
+	color:rgb(155,172,182);
+}
+
+.c_green{
+	color:rgb(84,189,182);
+}
+
+.c_blue{
+	color:rgb(85,171,255);
+}
+
+.c_yellow{
+	color:rgb(248,211,35);
+}
+
+
+#wrap{
+	width:1920px;
+	height:1080px;
+	overflow:hidden;
+	background:rgb(236,240,241);
+}
+
+
+.wrap{
+	width:1920px;
+	height:1080px;
+	overflow:hidden;
+}
+
+	.header{
+		width:100%;
+		height:95px;
+		background:#fff;
+		box-shadow:5px 2px 6px #ccc;
+		position:relative;
+	}
+
+	.header_title{
+		color:rgb(120,126,126);
+		font-size:30px;
+		font-weight:bold;
+		line-height:90px;
+	}
+
+		.header_title span{
+			margin-left:35px;
+		}
+
+
+	.time{
+		width:330px;
+		height:100%;
+		line-height:95px;
+		text-align:right;
+		position:absolute;
+		right:0px;
+		top:0px;
+		color:#fff;
+		font-size:24px;
+		background-image:url(../images/icon_time.png);
+		background-repeat:no-repeat;
+		background-position: 30px center;
+
+	}
+
+		.time span{
+			margin-right:45px;
+		}
+
+	
+.main_box{
+	width:100%;
+	height:980px;
+	overflow:hidden;	
+}		
+
+	.main_content{
+		margin:20px 25px 0px 25px;
+		width:auto;
+		height:100%;		
+	}
+
+		.main_top{
+			width:100%;
+			height:500px;
+			float:left;
+		}
+	
+	
+			.graph_box1{
+				width:780px;
+				height:500px;
+				border:1px solid rgb(227,231,232);		
+				position:relative;
+				background:#fff;
+				float:left;
+			}
+			
+			.graph_box1 .graph_title{
+				background:url(../images/icon_buliang.png) no-repeat 25px center
+			}
+
+
+			.graph_box2{
+				width:1040px;
+				height:500px;
+				border:1px solid rgb(227,231,232);		
+				position:relative;
+				background:#fff;
+				float:left;
+				margin-left:45px;
+			}
+			
+				
+			.graph_box2 .graph_title{
+				background:url(../images/icon_qiribuliang.png) no-repeat 25px center
+			}
+
+			.graph_box_corner{
+				top:-1px;
+				right:-1px;
+				position:absolute;
+				background:url(../images/icon_jiao.png) no-repeat;
+				height:28px;
+				width:24px;
+				z-index:9999;
+			}
+		
+			.graph_title{
+				height:65px;
+				width:100%;
+				font-size:26px;
+				line-height:65px;
+			}
+
+			.graph_title span{
+				margin-left:85px;
+			}
+	
+
+	
+			.graph_content{
+				height:430px;
+				margin:0px 45px 0px 30px;
+			}
+
+				.graph_tips{
+					width:100%;
+					height:70px;
+					line-height:70px;
+					color:rgb(164,138,212);
+					font-size:26px;
+					background:rgb(242,243,245);
+					position:relative;
+					margin-top:20px;
+				}
+					
+					.graph_tips span{
+						margin-left:45px;
+					}
+					
+					.graph_tips_circle{
+						width:90px;
+						height:90px;
+						border-radius:45px;
+						position:absolute;
+						left:190px;
+						top:-10px;
+						color:#fff;
+						line-height:90px;
+						text-align:center;
+					}
+
+					.graph_tips_circle_data{
+						position:absolute;
+						right:30px;
+						top:0px;
+						text-align:right;
+						color:rgb(82,188,179)
+					}
+
+					.graph_draw{
+						width:100%;
+						height:310px;
+						margin-top:20px;
+						
+					}	
+
+		
+		.main_bottom{
+			width:100%;
+			height:400px;
+			float:left;
+			margin-top:40px;
+		
+		}
+
+
+			.graph_box3{
+				width:100%;
+				height:100%;
+				border:1px solid rgb(227,231,232);
+				position:relative;
+				background:#fff;
+				float:left;
+			}
+
+				.graph_content_left{
+					width:460px;
+					height:100%;
+					float:left;
+				}
+
+					.graph_types{
+						margin:20px;
+						height:100%;
+					}
+
+						.graph_box3 .graph_content_left .graph_title{
+							text-align:center;
+						}
+						
+						.graph_value{
+							background:url(../images/icon_yunxingzhong.png) no-repeat center;
+							height:250px;
+							width:100%;
+							font-size:70px;
+							text-align:center;
+							line-height:240px;
+						}
+
+				.graph_content_right{
+					width:1400px;
+					height:100%;
+					float:right;
+				}
+					.graph_content_right .graph_content{ 
+						margin-top:20px;
+						height:370px
+					}
+				
+					.graph_box3 .graph_title{
+						background:url(../images/icon_buliangyujing.png) no-repeat 25px center
+					}
+
+					.graph_box3 .graph_draw{
+						height:280px;
+					
+					}
+					
+
+	.page2 .main_top{
+		height:450px;
+		
+	}
+	.page2 .graph_draw{
+		height:255px;
+		
+	}
+
+
+
+		.mian_tabs{
+			width:80px;
+			height:100%;
+			font-size:24px;
+			font-weight:bold;
+			text-align:center;
+			color:#fff;			
+			float:left;
+		}
+
+			.mian_tabs p{ 
+				width:40px;
+				margin:0px auto;
+				padding-top:70px;
+			}
+
+		.graph_box4{
+			width:560px;
+			height:100%;
+			border:1px solid rgb(227,231,232);
+			position:relative;
+			background:#fff;
+			float:left;
+			margin-left:30px;
+		}
+
+			.graph_box4 .graph_title{
+				background:url(../images/icon_buliang.png) no-repeat 25px center
+			}
+			
+			.graph_box4 .graph_tips_circle_data{
+				color:rgb(85,171,255);
+			}
+		
+
+
+		.graph_box6{
+			width:1155px;
+			height:100%;
+			border:1px solid rgb(227,231,232);
+			position:relative;
+			background:#fff;
+			float:left;
+			margin-left:30px;
+		}
+
+
+
+
+
+
+
+	.page2 .main_bottom{
+		height:450px;
+	}
+
+		
+		.graph_box5{
+			width:560px;
+			height:100%;
+			border:1px solid rgb(227,231,232);
+			position:relative;
+			background:#fff;
+			float:left;
+			margin-left:30px;
+		}
+
+			.graph_box5 .graph_title{
+				background:url(../images/icon_buliang.png) no-repeat 25px center
+			}
+			
+			.graph_box5 .graph_tips_circle_data{
+				color:rgb(164,138,212);
+			}
+
+
+
+		.graph_box7{
+			width:1155px;
+			height:100%;
+			border:1px solid rgb(227,231,232);
+			position:relative;
+			background:#fff;
+			float:left;
+			margin-left:30px;			
+		}
+
+
+			
+			.graph_box_right{
+				margin:20px;
+			}
+
+			.graph_box_right .graph_draw{
+				height:415px;
+			}
+		
+
+
+

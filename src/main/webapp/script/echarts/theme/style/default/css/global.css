@@ -1,0 +1,303 @@
+@charset "utf-8";
+/*+--------------------------------------+
+* 名称: global
+* 功能: 重设浏览器默认样式
+* 
+
+* 
+* Date:2013-04-22
+*+--------------------------------------+*/
+
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html{
+	color:#000;
+	zoom:1;
+	*height:1%;
+	-webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+	
+}
+
+
+/* 统一内外边距 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	margin:0;padding:0;outline:0 none;border:0 none;
+}
+/* 网页背景 */
+/*body{background: url("../images/bg-body.png") repeat scroll 50% 0 #EFEFEF;}*/
+
+/* 重设 HTML5 标签*/
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+/* HTML5 媒体文件跟 img 保持一致 */
+audio,canvas,video {
+    display: inline-block;*display: inline;*zoom: 1;
+}
+
+/* 重置元素内字体、大小、行高的统一性 */
+body,button,input,select,textarea,option{
+	font:13px/1.5 "微软雅黑",tahoma,arial;
+}
+
+input,select,textarea{
+	font-size:100%;
+}
+textarea{ resize:none !important;}
+
+/* 去掉各Table  cell 的边距并让其边重合 */
+table{
+	border-collapse:collapse;border-spacing:0;
+}
+
+/* IE bug fixed: th 不继承 text-align*/
+th{
+	text-align:inherit;
+}
+
+/* 去除默认边框 */
+fieldset,img{
+	border:0 none;
+	outline:0 none;
+}
+
+img,input[type="radio"],input[type="checkbox"]{
+	vertical-align:middle;
+}
+
+/* ie8 Quirks模式及ie低版本显示为行内表现 */
+iframe{
+	display:block;
+}
+
+/* for firefox */
+abbr,acronym{
+	border:0;font-variant:normal;
+}
+
+/* 统一 del 样式 */
+
+
+ol,ul {
+	border:0 none;
+	list-style:none;
+	outline:0 none;
+}
+
+/* 去除虚线框 ie6 ie7不支持此属性 */
+a:focus,input:focus,select:focus,textarea:focus,a,div:focus {
+	outline:none;
+}
+
+/* 此元素左对齐 */
+caption,th {
+	text-align:left;
+}
+
+/* 让标题都自定义, 适应多个系统应用 */
+
+q:before,q:after {
+	content:'';
+}
+
+
+
+/* 默认不显示下划线 */
+ins,a {
+	color:#333;
+	text-decoration:none;
+}
+
+ ie6 ie7下，对outline处理方案 
+*html a,*+html a{
+	star:expression(this.onFocus=this.blur());
+}
+
+/* 清除浮动 */
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+  overflow:hidden;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+}
+img {
+	/*
+  width: auto\9;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  */
+  border:0px;
+}
+a:focus {
+/*  outline: thin dotted #333;*/
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+
+audio:not([controls]) {
+  display: none;
+}
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+button,
+input {
+  *overflow: visible;
+  line-height: normal;
+}
+.lt { float: left; }
+.rt { float: right; }
+/* 清理浮动  */
+.cl:after,cl:before{ visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+.cl{zoom:1;  }/* for IE7 */
+/* 顶部样式开始  */
+
+.nav_L2 {
+	Z-INDEX: 10; MARGIN: auto; WIDTH: 960px; HEIGHT: 38px
+}
+.nav_L2 UL LI {
+	FLOAT: right
+}
+.nav_L2 UL LI A {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 38px; PADDING-LEFT: 12px; PADDING-RIGHT: 12px; DISPLAY: inline-block; HEIGHT: 38px; COLOR: #fff; PADDING-TOP: 0px
+}
+
+.nav_fixed {
+	Z-INDEX: 9999; POSITION: fixed; TOP: 0px; LEFT: 0px; opacity: 0.9; -moz-opacity: 0.9; -khtml-opacity: 0.9
+}
+* HTML .nav_fixed {
+	POSITION: absolute; ; TOP: expression(eval(document.documentElement.scrollTop)); ; LEFT: expression(eval(document.documentElement.scrollLeft))
+}
+/* 顶部样式结束  */
+
+/* 底部样式开始   */
+
+
+.footer_about {
+	MARGIN-BOTTOM: 20px
+}
+.footer_about DL {
+	WIDTH: 200px; MARGIN-RIGHT: 8px;
+}
+.footer_about .dlLeft {
+	FLOAT: left
+}
+.footer_about .dlRight {
+	FLOAT: right
+}
+.footer_about DT {
+	MARGIN-BOTTOM: 12px; FONT-WEIGHT: bold
+}
+.footer_about DD {
+	LINE-HEIGHT: 20px
+}
+
+.footer_about .userService {
+	WIDTH: 188px
+}
+.footer_about .userService A.online {
+	COLOR: #ffde00; TEXT-DECORATION: underline
+}
+.footer_about .userService DD {
+	LINE-HEIGHT: 24px
+}
+
+
+
+.footer_links_title {
+	POSITION: absolute; PADDING-BOTTOM: 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; TOP: 0px; PADDING-TOP: 10px; LEFT: 0px; _top: 2px
+}
+.footer_links_list {
+	WIDTH: 910px; MARGIN-LEFT: 64px; diplay: block
+}
+.footer_links A {
+	MARGIN: 0px 5px
+}
+.footer_copy {
+	POSITION: relative; PADDING-BOTTOM: 14px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; PADDING-TOP: 14px
+}
+.footer_copy_left {
+	POSITION: absolute; TOP: 14px; LEFT: 0px
+}
+.footer_copy_right {
+	
+}
+.footer_copy_right P {
+	TEXT-ALIGN: right; LINE-HEIGHT: 21px
+}
+.footer_copy .join A {
+	LINE-HEIGHT: 32px; BACKGROUND-COLOR: #444; PADDING-LEFT: 40px; PADDING-RIGHT: 12px; DISPLAY: inline-block; HEIGHT: 32px; VERTICAL-ALIGN: middle; MARGIN-RIGHT: 16px
+}
+.footer_copy .join A:hover {
+	BACKGROUND-COLOR: #5a5a5a
+}
+.footer_copy .join A.sina {
+	BACKGROUND-POSITION: 0px -703px
+}
+.footer_copy .join A.qqun {
+	BACKGROUND-POSITION: 0px -746px
+}
+
+.cf:before {
+	DISPLAY: table; CONTENT: ""
+}
+.cf:after {
+	DISPLAY: table; CONTENT: ""
+}
+.cf:after {
+	CLEAR: both
+}
+/* 底部样式结束  */
+/* 顶部样式背景和颜色可更改  */
+.nav {
+	BACKGROUND-COLOR: #3c3c3c; WIDTH: 100%
+}.nav_L2 UL LI A.current {
+	BACKGROUND-COLOR: #191919
+}
+.nav_L2 UL LI A:hover {
+	BACKGROUND-COLOR: #595959; COLOR: #fff
+}
+
+/* 底部样式背景和颜色可更改  */
+.footer {
+	BACKGROUND-COLOR: #333
+}
+.footer_links {
+	BORDER-BOTTOM: #555 1px solid; POSITION: relative; PADDING-BOTTOM: 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; BORDER-TOP: #555 1px solid; PADDING-TOP: 10px
+}
+.footer_L2 {
+	MARGIN: auto; WIDTH: 960px; COLOR: #898989; PADDING-TOP: 32px
+}
+.footer_L2 A {
+	COLOR: #898989; font-size:12px;
+}
+.footer_L2 A:hover {
+	COLOR: #fff
+}
+
+

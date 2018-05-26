@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-08-24 15:22:35
+ * @version $Id$
+ */
+@charset "utf-8";
+*{padding:0; margin:0;}
+html{height:100%;}
+body{background:rgb(255,255,255); font:12px/1 Tahoma, Arial, Helvetica, sans-serif,"\5FAE\8F6F\96C5\9ED1",serifl;color:#333;height: 100%;_height:100%;position:relative;}
+button{cursor:pointer; border:none;outline:none}
+.hidden{ display:none;}
+a img{ border:none;}
+/*a:link, a:visited{color:#000;}
+a:hover{text-decoration: none;}*/
+.clear{clear:both;}
+a,p,div,td,input,select,button,textarea{ text-decoration:none; font-family:"\5FAE\8F6F\96C5\9ED1"; font-size:12px;outline:none;}
+.span_oriange{color:rgb(255,143,89);}
+.span_doc_blue{color:rgb(57,198,205);}
+.span_red{color:rgb(249,139,139);}
+.text_blue{color:rgb(57,198,205);}
+ul{margin:0; padding:0; list-style:none;}
+.float_L{float:left;}
+.float_R{float:right;}
+
+/*body_main*/
+.body_main{background:url(images/bg_main.png) left top no-repeat rgb(235,244,247);}
+/*input*/
+::-webkit-input-placeholder {
+  color:#7c7c7c/* rgb(82,165,195) */;
+  font-size:14px;
+}
+:-moz-placeholder {/* Firefox 18- */
+  color:#7c7c7c/* rgb(82,165,195) */;
+  font-size:14px;
+}
+::-moz-placeholder{/* Firefox 19+ */
+  color:#7c7c7c/* rgb(82,165,195) */;
+  font-size:14px;
+}
+:-ms-input-placeholder {
+  color:#7c7c7c/* rgb(82,165,195) */;
+  font-size:14px;
+}
+.file_adapt_100{padding:0;width:100%;border:none;/* height:30px; */line-height:44px;font-size:18px;color:#7c7c7c/* rgb(82,165,195) */;}
+
+/*btn*/
+.btn_login{width:296px;height:46px;background:url(images/ico_bg.png)/* rgb(82,165,195) */;font-size:20px;border:none;color:rgb(255,255,255);/* margin-right:20px; */cursor:pointer;}
+.btn_reset{width:296px;height:46px;background:url(images/ico_bg.png)/* rgb(253,208,107) */;font-size:20px;border:none;color:rgb(255,255,255);margin-top:20px;cursor:pointer;}

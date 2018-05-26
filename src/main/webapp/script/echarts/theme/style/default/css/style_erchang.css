@@ -1,0 +1,444 @@
+@charset "utf-8";
+
+html,body{height:100%;overflow:;margin:0px;	font-family:'微软雅黑'}
+
+
+/**********
+	publick color
+	b_ -----> background
+	c_ -----> color
+
+
+***********/
+
+.b_Purple{
+	background-color:rgb(164,138,212);
+}
+
+.b_green{
+	background-color:rgb(84,189,182);
+}
+
+.b_blue{
+	background-color:rgb(85,171,255);
+}
+
+.b_black{
+	background-color:rgb(32,40,43);
+}
+
+.b_sblack{
+	background-color:rgb(42,50,53);
+}
+
+.b_white_p50{
+	background-color:rgb(72,82,88);
+}
+
+.b_warn_green{
+	background-color:rgb(16,212,208);
+}
+
+.b_warn_yellow{
+	background-color:rgb(230,240,8);
+}
+
+.b_warn_red{
+	background-color:rgb(255,17,17);
+}
+
+.b_warn_orange{
+	background-color:rgb(255, 165, 0);
+}
+
+
+.c_Purple{
+	color:rgb(164,138,212);
+}
+
+.c_gray{
+	color:rgb(155,172,182);
+}
+
+.c_green{
+	color:rgb(84,189,182);
+}
+
+.c_blue{
+	color:rgb(85,171,255);
+}
+
+.c_yellow{
+	color:rgb(248,211,35);
+}
+
+
+#wrap{
+	width:100%;
+	height:100%;
+	overflow:;
+	
+}
+
+
+.wrap{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	background:rgb(32,40,43);
+}
+
+	.header{
+		width:100%;
+		height:95px;
+		/*box-shadow:5px 2px 6px #ccc;*/
+		position:relative;
+		background:rgb(42,50,53);
+	}
+
+	.header_title{
+		color:rgb(165,173,184);
+		font-size:30px;
+		font-weight:bold;
+		line-height:90px;
+	}
+
+		.header_title span{
+			margin-left:35px;
+		}
+
+
+	.time{
+		width:420px;
+		height:100%;
+		line-height:95px;
+		text-align:right;
+		position:absolute;
+		right:0px;
+		top:0px;
+		color:#fff;
+		font-size:24px;
+		background-image:url(../images/icon_time.png);
+		background-repeat:no-repeat;
+		background-position: 20px center;
+		background-color:rgb(72,82,88);
+
+	}
+
+		.time span{
+			margin-right:45px;
+		}
+
+	
+.main_box{
+	width:100%;
+	height:980px;
+	overflow:hidden;	
+}		
+
+	.main_content{
+		margin:20px 25px 0px 25px;
+		width:auto;
+		height:100%;
+		
+	}
+
+		.main_top{
+			width:100%;
+			height:455px;
+			float:left;
+			
+		}
+	
+	
+			.list_box{
+				width:100%;
+				height:100%;
+				position:relative;
+				float:left;
+				background:rgb(42,50,53);
+			}
+			
+				.list_box .list_title{
+					background:url(../images/erchang/icon_001.png) no-repeat 25px center
+				}
+
+				.list_title,.graph_title{
+					height:70px;
+					width:100%;
+					font-size:26px;
+					line-height:65px;
+					color:rgb(142,146,147);
+					border-bottom:1px solid rgb(67,78,84);
+					position:relative;
+				}
+
+					.list_title span,.graph_title span{
+						margin-left:85px;
+					}
+					
+					.list_tips{
+						width:185px;
+						height:40px;
+						position:absolute;
+						top:15px;
+						right:0px;
+						background:rgb(58,67,72);
+						border-top-left-radius: 20px;
+						border-bottom-left-radius:  20px;
+						box-shadow:0px 0px 6px rgba(0,0,0,0.2);
+						line-height:40px;
+						text-align:center;
+						color:rgb(178,187,192);
+						font-size:22px;
+					}
+						
+						.list_tips_left{
+							width:110px;
+							height:100%;
+							float:left;
+						
+						}
+						
+						.list_tips_ll,.list_tips_lr{
+							width:49%;
+							float:left;
+							
+						}
+
+						.list_tips_ll{
+							background:rgb(16,212,208);
+							color:rgb(43,49,52);
+							border-top-left-radius: 20px;
+							border-bottom-left-radius:  20px;
+						}
+						
+						.list_tips_lr{
+							background:rgb(57,66,71);
+							color:#fff;
+							border-top-right-radius: 20px;
+							border-bottom-right-radius:  20px;
+							border:1px solid rgba(0,0,0,0.2)
+						}
+
+						.list_tips_right{
+							width:70px;
+							float:right;
+							height:100%;
+						}
+						
+
+
+
+
+				.list_content{
+					height:380px;
+					width:100%;
+					overflow:hidden;
+				}
+
+				.list_content table{
+				
+				}
+
+				.list_content table td{
+					height:63px;
+					line-height:63px;
+					font-family:'微软雅黑';
+					font-size:24px;
+					text-align:center;
+					color:rgb(116,134,144)
+				}
+
+				.list_content table .page_Num{
+					text-align:right;
+					padding-right:20px;
+				}
+
+
+				.list_content .odd_line{
+					background:rgb(53,64,70);					
+				}
+
+				.list_content .warn_lamp_box{
+					position:relative;
+				}
+
+				.list_content .warn_lamp{
+					height:40px;
+					width:8px;
+					position:absolute;
+					top:8px;
+					right:0px;
+				}
+
+
+		.main_bottom{
+			width:100%;
+			height:470px;
+			float:left;
+			margin-top:20px;
+			
+		}
+				
+
+			.graph_content{
+				height:380px;
+				margin:10px 45px 0px 30px;
+				
+			}
+		
+
+			.graph_box1{
+				width:100%;
+				height:100%;
+				position:relative;
+				float:left;
+				background:rgb(42,50,53);
+			}
+
+				
+				
+				.graph_box1 .graph_title{
+					background:url(../images/erchang/icon_004.png) no-repeat 25px center
+				}
+
+				.graph_box1 .graph_draw{
+					height:380px;
+				}
+					
+
+
+
+
+	
+
+
+	.page2 .list_box{
+		width:640px;
+		float:left;
+	}
+
+
+
+
+	.page2 .graph_draw{
+		height:255px;
+	}
+
+
+		.graph_box2{
+			width:1210px;
+			height:100%;
+			position:relative;
+			float:left;
+			margin-left:20px;
+			background:rgb(42,50,53);
+		}
+
+		.graph_box2 .graph_title{
+			background:url(../images/erchang/icon_002.png) no-repeat 25px center
+		}
+		
+
+		.graph_box2	.graph_content{
+			margin:10px 10px 0px 10px;
+		}
+			.graph_box2 .graph_draw{
+				height:365px;
+			}
+
+
+		.graph_box3{
+			width:640px;
+			height:100%;
+			float:left;
+			background:rgb(42,50,53);
+		}
+
+			.graph_box3 .graph_title{
+				background:url(../images/erchang/icon_003.png) no-repeat 25px center
+			}
+			
+			.graph_box3	.graph_content{
+				margin:10px 10px 0px 10px;
+			}
+
+			.graph_box3 .graph_draw{
+				height:375px;
+			}
+			
+
+
+		.graph_box4{
+			width:1210px;
+			height:100%;
+			position:relative;
+			float:left;
+			margin-left:20px;
+			background:rgb(42,50,53);
+		}
+
+			.graph_box4 .graph_title{
+				background:url(../images/erchang/icon_004.png) no-repeat 25px center
+			}
+			
+			.graph_box4	.graph_content{
+				margin:10px 10px 0px 10px;
+			}
+
+			.graph_box4 .graph_draw{
+				height:375px;
+			}
+
+
+
+
+
+	.page3 .list_content{
+		height:880px;
+	}
+	
+	
+	
+	
+	.page4 .list_content{
+		height:880px;
+	}
+		.graph_box5 .graph_title{
+			background:url(../images/erchang/icon_006.png) no-repeat 25px center
+		}
+		
+
+		.graph_box5 .graph_content{
+			margin:10px 10px 0px 15px;
+		}
+			.graph_box5 .graph_draw{
+				height:850px;
+			}
+			
+			
+			
+		.graph_box6{
+			width:1210px;
+			height:100%;
+			position:relative;
+			float:left;
+			margin-left:20px;
+			background:rgb(42,50,53);
+		}
+
+			.graph_box6 .graph_title{
+				background:url(../images/erchang/icon_005.png) no-repeat 25px center
+			}
+			
+			.graph_box6	.graph_content{
+				margin:10px 10px 0px 10px;
+			}
+
+			.graph_box6 .graph_draw{
+				height:375px;
+			}
+
+
+	

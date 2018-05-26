@@ -1,0 +1,434 @@
+@charset "utf-8";
+
+html,body{height:100%;overflow:auto;margin:0px;	font-family:'微软雅黑'}
+table {border-collapse: collapse;border-spacing: 0;}
+
+/**********
+	publick color
+	b_ -----> background
+	c_ -----> color
+
+
+***********/
+
+.b_Purple{
+	background-color:rgb(164,138,212);
+}
+
+.b_green{
+	background-color:rgb(84,189,182);
+}
+
+.b_blue{
+	background-color:rgb(85,171,255);
+}
+
+.b_black{
+	background-color:rgb(32,40,43);
+}
+
+.b_sblack{
+	background-color:rgb(42,50,53);
+}
+
+.b_white_p50{
+	background-color:rgb(72,82,88);
+}
+
+.b_warn_green{
+	background-color:rgb(16,212,208);
+}
+
+.b_warn_yellow{
+	background-color:rgb(230,240,8);
+}
+
+.b_warn_red{
+	background-color:rgb(255,17,17);
+}
+
+
+.c_Purple{
+	color:rgb(164,138,212);
+}
+
+.c_gray{
+	color:rgb(155,172,182);
+}
+
+.c_green{
+	color:rgb(84,189,182);
+}
+
+.c_blue{
+	color:rgb(85,171,255);
+}
+
+.c_yellow{
+	color:rgb(248,211,35);
+}
+
+
+#wrap{
+	width:100%;
+	height:100%;
+	
+}
+
+
+.wrap{
+	width:100%;
+	height:100%;
+	background:rgb(255,255,255);
+}
+
+	
+.main_box{
+	width:100%;
+	height:100%;
+	overflow-x:hidden;	
+	overflow-y:auto;
+}		
+
+	.main_content{
+		margin:5px 5px 5px 5px;
+		width:auto;
+		height:98.8%
+	}
+	
+	.header_title{
+		color:rgb(165,173,224);
+		font-size:14px;
+		font-weight:bold;
+		text-align:left;
+	}
+
+		.header_title span{
+			margin-left:5px;
+		}
+		
+	.content_list{
+		font-size:12px;
+		line-height:30px;
+		text-align:left;
+	}
+
+		.content_list span{
+			margin-left:5px;
+		}
+		
+		
+	.main_top_left_1{
+		width:20%;
+		height:200px;
+		float:left;
+	}
+		
+	.main_top_left_2{
+		width:20%;
+		height:300px;
+		float:left;
+		margin-left:-20%;
+		margin-top:200px;
+	}
+		
+	.main_top_left_3{
+		width:20%;
+		height:300px;
+		margin-left:-20%;
+		margin-top:500px;
+		float:left;
+	}
+		
+	.main_top_center_1{
+		width:50%;
+		height:150px;
+		margin-left:0px;
+		float:left;
+	}
+		
+	.main_top_center_2{
+		width:50%;
+		height:300px;
+		margin-left:0px;
+		margin-top:0px;
+		float:left;
+	}
+		
+	.main_top_right_1{
+		width:30%;
+		height:450px;
+		margin-left:70%;
+		margin-top:-800px;
+		float:left;
+	}
+		
+	.main_bottom_left_1{
+		width:45%;
+		height:350px;
+		margin-left:20%;
+		margin-top:-350px;
+		float:left;
+	}
+		
+	.main_bottom_right_1{
+		width:35%;
+		height:350px;
+		margin-left:65%;
+		margin-top:-350px;
+		float:left;
+	}
+				
+	.list_content_second_sealing{
+		height:100%;
+		width:100%;
+		overflow:hidden;
+		border:1px solid rgb(213,213,213);
+		font-family:'微软雅黑';
+		font-size:14px;
+		text-align:center;
+		color:rgb(0,0,0);
+	}
+		
+	.list_content_top_left_2{
+		height:100%;
+		width:100%;
+		overflow:hidden;
+		border:1px solid rgb(213,213,213);
+		font-family:'微软雅黑';
+		font-size:14px;
+		text-align:center;
+	}
+		
+		.list_content_top_left_2 table{
+			align:center;
+			width:97.5%;
+			height:90%;
+			margin:5px;
+			border:1px solid rgb(171,199,236);
+		}
+
+			.list_content_top_left_2 table td{
+				height:30px;
+				line-height:30px;
+				font-family:'微软雅黑';
+				font-size:14px;
+				text-align:center;
+				border:1px solid rgb(171,199,236);
+				color:rgb(116,134,144)
+			}
+				
+	.list_content_top_left_3{
+		height:100%;
+		width:100%;
+		overflow:hidden;
+		border:1px solid rgb(213,213,213);
+		font-family:'微软雅黑';
+		font-size:14px;
+		text-align:center;
+	}
+		
+		.list_content_top_left_3 table{
+			align:center;
+			width:97.5%;
+			height:90%;
+			margin:5px;
+			border:1px solid rgb(171,199,236);
+		}
+
+			.list_content_top_left_3 table td{
+				height:30px;
+				line-height:30px;
+				font-family:'微软雅黑';
+				font-size:14px;
+				text-align:center;
+				border:1px solid rgb(171,199,236);
+				color:rgb(116,134,144)
+			}
+				
+				
+	.list_content_top_center_1{
+		height:100%;
+		width:100%;
+		overflow:hidden;
+		border-style: solid;
+		border-top-width: 1px;
+		border-right-width: 1px;
+		border-bottom-width: 0px;
+		border-left-width: 1px;
+		border-color:rgb(213,213,213);
+		font-family:'微软雅黑';
+		font-size:14px;
+		text-align:center;
+	}
+		
+		.list_content_top_center_1 table{
+			align:center;
+			width:90%;
+			height:70%;
+			margin:5px 0% 0px 6%;
+			border:1px solid rgb(171,199,236);
+		}
+
+			.list_content_top_center_1 table td{
+				height:20px;
+				line-height:20px;
+				font-family:'微软雅黑';
+				font-size:14px;
+				text-align:center;
+				border:1px solid rgb(171,199,236);
+				color:rgb(116,134,144)
+			}
+				
+	.list_content_top_center_2{
+		height:100%;
+		width:100%;
+		overflow:hidden;
+		border-style: solid;
+		border-top-width: 0px;
+		border-right-width: 1px;
+		border-bottom-width: 1px;
+		border-left-width: 1px;
+		border-color:rgb(213,213,213);
+		font-family:'微软雅黑';
+		font-size:14px;
+		text-align:center;
+	}
+				
+	.list_content_top_right_1{
+		height:100%;
+		width:100%;
+		overflow:hidden;
+		border:1px solid rgb(213,213,213);
+		font-family:'微软雅黑';
+		font-size:14px;
+		text-align:center;
+		overflow:auto;
+	}
+		
+		.list_content_top_right_1 table{
+			align:center;
+			width:97.5%;
+			height:94%;
+			margin:5px;
+			border:1px solid rgb(171,199,236);
+		}
+
+			.list_content_top_right_1 table td{
+				height:30px;
+				line-height:30px;
+				font-family:'微软雅黑';
+				font-size:14px;
+				text-align:center;
+				border:1px solid rgb(171,199,236);
+				color:rgb(116,134,144)
+			}
+				
+	.list_content_bottom_right_1{
+		height:100%;
+		width:100%;
+		overflow:hidden;
+		border:1px solid rgb(213,213,213);
+		font-family:'微软雅黑';
+		font-size:14px;
+		text-align:center;
+		overflow:auto;
+	}
+		
+		.list_content_bottom_right_1 table{
+			align:center;
+			width:98%;
+			height:91%;
+			margin: 5px;
+			border:1px solid rgb(171,199,236);
+		}
+
+			.list_content_bottom_right_1 table td{
+				height:30px;
+				line-height:30px;
+				font-family:'微软雅黑';
+				font-size:14px;
+				text-align:center;
+				border:1px solid rgb(171,199,236);
+				color:rgb(116,134,144)
+			}
+		
+	.draw_bar_chart{
+		width:100%;
+		height:100%;
+	}
+			
+	.draw_line_chart{
+		width:100%;
+		height:100%;
+	}
+		
+		
+		
+		
+	.graph_box15{
+		width:100%;
+		height:100%;
+		position:relative;
+		float:left;
+		background:rgb(255,255,255);
+		padding:0px 5px 5px 0px;
+	}
+	.graph_box16{
+		width:100%;
+		height:100%;
+		position:relative;
+		float:left;
+		background:rgb(255,255,255);
+		padding:5px 5px 5px 0px;
+	}
+	.graph_box17{
+		width:100%;
+		height:100%;
+		position:relative;
+		float:left;
+		background:rgb(255,255,255);
+		padding:5px 5px 0px 0px;
+	}
+	.graph_box18{
+		width:100%;
+		height:100%;
+		position:relative;
+		float:left;
+		background:rgb(255,255,255);
+		padding:0px 5px 0px 5px;
+	}
+	.graph_box19{
+		width:100%;
+		height:100%;
+		position:relative;
+		float:left;
+		background:rgb(255,255,255);
+		padding:0px 5px 5px 5px;
+	}
+	.graph_box20{
+		width:100%;
+		height:100%;
+		position:relative;
+		float:left;
+		background:rgb(255,255,255);
+		padding:0px 0px 5px 5px;
+	}
+	.graph_box21{
+		width:100%;
+		height:100%;
+		position:relative;
+		float:left;
+		background:rgb(255,255,255);
+		padding:5px 5px 0px 5px;
+	}
+	.graph_box22{
+		width:100%;
+		height:100%;
+		position:relative;
+		float:left;
+		background:rgb(255,255,255);
+		padding:5px 0px 0px 5px;
+	}
+				
+		

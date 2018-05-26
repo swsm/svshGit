@@ -1,0 +1,171 @@
+{
+  "paths": {
+    "Ext": "ext/classic/base",
+    "app.view.main.MainModel": "app/view/main/MainModel.js"
+  },
+  "js": [
+    {
+      "isSdk": true,
+      "path": "ext/build/ext-all-rtl.js"
+    },
+    {
+      "path": "ext/classic/theme-neptune/overrides/Component.js"
+    },
+    {
+      "path": "ext/classic/theme-neptune/overrides/grid/RowEditor.js"
+    },
+    {
+      "path": "ext/classic/theme-neptune/overrides/grid/column/RowNumberer.js"
+    },
+    {
+      "path": "ext/classic/theme-neptune/overrides/layout/component/Dock.js"
+    },
+    {
+      "path": "ext/classic/theme-neptune/overrides/menu/Menu.js"
+    },
+    {
+      "path": "ext/classic/theme-neptune/overrides/menu/Separator.js"
+    },
+    {
+      "path": "ext/classic/theme-neptune/overrides/panel/Panel.js"
+    },
+    {
+      "path": "ext/classic/theme-triton/overrides/form/field/Date.js"
+    },
+    {
+      "path": "ext/classic/theme-neptune/overrides/panel/Table.js"
+    },
+    {
+      "path": "ext/classic/theme-neptune/overrides/picker/Month.js"
+    },
+    {
+      "path": "ext/classic/theme-neptune/overrides/resizer/Splitter.js"
+    },
+    {
+      "path": "ext/classic/theme-neptune/overrides/toolbar/Paging.js"
+    },
+    {
+      "path": "ext/classic/theme-neptune/overrides/toolbar/Toolbar.js"
+    },
+    {
+      "path": "ext/classic/theme-triton/overrides/Component.js"
+    },
+    {
+      "path": "ext/classic/theme-triton/overrides/form/field/Checkbox.js"
+    },
+    {
+      "path": "ext/classic/theme-triton/overrides/grid/Panel.js"
+    },
+    {
+      "path": "ext/classic/theme-triton/overrides/grid/column/Column.js"
+    },
+    {
+      "path": "ext/classic/theme-triton/overrides/grid/column/RowNumberer.js"
+    },
+    {
+      "path": "ext/classic/theme-triton/overrides/grid/plugin/RowExpander.js"
+    },
+    {
+      "path": "ext/classic/theme-triton/overrides/list/TreeItem.js"
+    },
+    {
+      "path": "ext/classic/theme-triton/overrides/menu/Item.js"
+    },
+    {
+      "path": "ext/classic/theme-triton/overrides/menu/Menu.js"
+    },
+    {
+      "path": "ext/classic/theme-triton/overrides/picker/Date.js"
+    },
+    {
+      "path": "ext/classic/theme-triton/overrides/picker/Month.js"
+    },
+    {
+      "path": "ext/classic/theme-triton/overrides/resizer/Splitter.js"
+    },
+    {
+      "path": "ext/classic/theme-triton/overrides/selection/CheckboxModel.js"
+    },
+    {
+      "path": "ext/classic/theme-triton/overrides/selection/SpreadsheetModel.js"
+    },
+    {
+      "path": "ext/classic/theme-triton/overrides/toolbar/Paging.js"
+    },
+    {
+      "path": "ext/packages/ux/classic/BoxReorderer.js"
+    },
+    {
+      "path": "ext/packages/ux/classic/GroupTabRenderer.js"
+    },
+    {
+      "path": "ext/packages/ux/classic/TabScrollerMenu.js"
+    },
+    {
+      "path": "ext/packages/ux/classic/TabReorderer.js"
+    },
+    {
+      "path": "ext/packages/ux/classic/TabCloseMenu.js"
+    },
+    {
+      "path": "ext/packages/ux/classic/GroupTabPanel.js"
+    },
+    {
+      "path": "ext/packages/ux/classic/grid/SubTable.js"
+    },
+    {
+      "path": "ext/classic/locale/overrides/zh_CN/ext-locale-zh_CN.js"
+    },
+    {
+      "path": "app/utils/Tool.js"
+    },
+    {
+      "path": "app.js"
+    }
+  ],
+  "css": [
+    {
+      "remote": false,
+      "exclude": [
+        "fashion"
+      ],
+      "path": "ext/themes/triton/resources/app-all_1.css"
+    },
+    {
+      "remote": false,
+      "exclude": [
+        "fashion"
+      ],
+      "path": "ext/themes/triton/resources/app-all_2.css"
+    },
+    {
+      "remote": false,
+      "exclude": [
+        "fashion"
+      ],
+      "path": "ext/themes/triton/resources/app-all_3.css"
+    },
+    {
+      "remote": false,
+      "exclude": [
+        "fashion"
+      ],
+      "path": "ext-gantt/resources/css/sch-gantt-all.css"
+    }
+  ],
+  "cache": {
+    "enable": false,
+    "deltas": true
+  },
+  "fashion": {
+    "inliner": {
+      "enable": false
+    }
+  },
+  "loader": {
+    "cache": false,
+    "cacheParam": "_dc"
+  },
+  "id": "6dab5c5d-5dfa-4042-a598-ab869ed1f266",
+  "profile": ""
+}

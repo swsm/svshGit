@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+html,body{height:100%;overflow:;margin:0px;	font-family:'微软雅黑'}
+
+
+.wrap{
+	background:rgb(237,238,242)
+}
+
+	.header{
+		background:#fff;
+	}
+	
+	.header_title{
+		color:rgb(79,96,104);
+	}
+
+
+	.time{
+		background-color:rgb(0,191,233);
+	}
+
+
+
+		.list_box{
+			background:#fff;
+		}
+
+
+			.list_box .list_title{
+				background-image:url(../images/erchang/icon_005.png);
+			}
+
+			.list_tips{
+				background:#fff;
+				color:rgb(178,187,194);
+			}
+
+				.list_tips_ll{
+					background:rgb(254,196,1);
+					color:#fff;
+				}
+				
+				.list_tips_lr{
+					background:rgb(55,164,221);
+					color:#fff;
+					border:none
+				}
+
+
+
+
+
+	
+		.list_title,.graph_title{
+			color:rgb(112,150,174);
+			border-bottom:1px solid rgb(227,232,232);
+		}
+
+
+		
+		.list_content table td{
+			color:rgb(116,134,146);
+		}
+
+		.list_content .odd_line{
+			background:rgb(236,250,254);					
+		}
+
+
+
+
+			.graph_box1,.graph_box2,.graph_box3,.graph_box4,.graph_box5,.graph_box6{				
+				background:#fff;
+			}
+
+			.graph_box2 .graph_title{
+				background-image:url(../images/erchang/icon_006.png);
+			}
+			
+			.graph_box3 .graph_title{
+				background-image:url(../images/erchang/icon_007.png);
+			}
+			
+			.graph_box5 .graph_title{
+				background-image:url(../images/erchang/icon_007.png);
+			}
+			.graph_box6 .graph_title{
+				background-image:url(../images/erchang/icon_005.png);
+			}
+
