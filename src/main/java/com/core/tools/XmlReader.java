@@ -57,28 +57,23 @@ public class XmlReader {
             throw new IllegalArgumentException("xmlFilePath is null");
         }
         String temp = xmlFilePath;
-        int index;
-        index = xmlFilePath.lastIndexOf(".");
+        int index = xmlFilePath.lastIndexOf(".");
         if (index == -1) {
             temp += ".xml";
         }
-        File file;
-        file = new File(temp);
+        File file = new File(temp);
         if (!file.exists() || !file.isFile()) {
-            URL url;
-            url = XmlReader.class.getResource(temp);
+            URL url = XmlReader.class.getResource(temp);
             if (url == null) {
                 throw new IllegalArgumentException(temp + " not find!");
             }
             temp = url.getFile();
         }
-        long currentTime;
-        currentTime = System.currentTimeMillis() / 1000;
+        long currentTime = System.currentTimeMillis() / 1000;
         if (xmlFilePath.equals(filePath) && (currentTime - initLoadTime) < cacheTime) {
             return;
         }
-        SAXReader reader;
-        reader = new SAXReader();
+        SAXReader reader = new SAXReader();
         try {
             xmlDoc = reader.read(temp);
             filePath = xmlFilePath;
@@ -106,8 +101,7 @@ public class XmlReader {
         if (path == null) {
             throw new IllegalArgumentException("path is null");
         }
-        List<Node> list;
-        list = xmlDoc.selectNodes(path);
+        List<Node> list = xmlDoc.selectNodes(path);
         if (list == null || list.isEmpty()) {
             return new Node[0];
         }
@@ -130,8 +124,7 @@ public class XmlReader {
         if (path == null) {
             throw new IllegalArgumentException("path is null!");
         }
-        Node node;
-        node = xmlDoc.selectSingleNode(path);
+        Node node = xmlDoc.selectSingleNode(path);
         if (node == null) {
             throw new IllegalArgumentException("path[" + path + "] is error,is not the path!");
         }

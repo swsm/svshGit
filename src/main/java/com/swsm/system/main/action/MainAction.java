@@ -82,46 +82,36 @@ public class MainAction {
     @ResponseBody
     @RequestMapping(value = "/main/getResource.mvc", produces = "application/json; charset=utf-8")
     public String getResource(HttpServletRequest request) throws Exception {
-        try {
-            String parentId = request.getParameter("node");
-            if (parentId == null || "root".equals(parentId)) {
-                parentId = ActionConstants.ROOT_NODE_ID;
-            }
-            UserSession userSession;
-            userSession = SessionManage.getSessionManage().getUserSession(request.getSession(false));
-            Resource[] resources;
-            resources = this.mainService.getResourcesByParentId(parentId, userSession.getLoginName());
-            List<TreeNodeModel> list;
-            list = new ArrayList<TreeNodeModel>();
-            for (Resource res : resources) {
-                TreeNodeModel model;
-                model = new TreeNodeModel();
-                model.setId(res.getId());
-                model.setText(res.getResName());
-                model.setLeaf(false);
-                if ("1".equals(res.getModualFalg())) {
-                    model.setLeaf(true);
-                } else {
-                    if ("1".equals(res.getResType()) && "".equals(res.getParentId())) { //外层目录节点
-                        if ("".equals(res.getIconCls()) || null == res.getIconCls()) {
-                            model.setIconCls(" icon-lefticon_18px_xitong  ");
-                        } else {
-                            model.setIconCls(res.getIconCls());
-                        }
-                    } else {
-                        model.setIconCls(" x-tree-icon-leaf ");
-                    }
-                }
-                model.setResCode(res.getResCode());
-                list.add(model);
-            }
-            String str;
-            str = MesJsonUtil.toJsonStr(list, new PageInfo(), null);
-            logger.info(str);
-            return str;
-        } catch (BaseException e) {
-            throw e;
+        String parentId = request.getParameter("node");
+        if (parentId == null || "root".equals(parentId)) {
+            parentId = ActionConstants.ROOT_NODE_ID;
         }
-
+        UserSession userSession = SessionManage.getSessionManage().getUserSession(request.getSession(false));
+        Resource[] resources = this.mainService.getResourcesByParentId(parentId, userSession.getLoginName());
+        List<TreeNodeModel> list = new ArrayList<>();
+        for (Resource res : resources) {
+            TreeNodeModel model = new TreeNodeModel();
+            model.setId(res.getId());
+            model.setText(res.getResName());
+            model.setLeaf(false);
+            if ("1".equals(res.getModualFalg())) {
+                model.setLeaf(true);
+            } else {
+                if ("1".equals(res.getResType()) && "".equals(res.getParentId())) { //外层目录节点
+                    if ("".equals(res.getIconCls()) || null == res.getIconCls()) {
+                        model.setIconCls(" icon-lefticon_18px_xitong  ");
+                    } else {
+                        model.setIconCls(res.getIconCls());
+                    }
+                } else {
+                    model.setIconCls(" x-tree-icon-leaf ");
+                }
+            }
+            model.setResCode(res.getResCode());
+            list.add(model);
+        }
+        String str = MesJsonUtil.toJsonStr(list, new PageInfo(), null);
+        logger.info(str);
+        return str;
     }
 }

@@ -147,7 +147,7 @@ public class SessionFilter implements Filter {
                 for (int i = 0; i < res.length; i++) {
                     resCodes[i] = res[i].getResCode();
                 }
-                LoginUtil.loadSession(resCodes, user, organSet, roleSet, request, null);
+                LoginUtil.loadSession(resCodes, user, organSet, roleSet, request);
                 return true;
             } catch (BaseException e) {
                 logger.error(e.getMessage(), e);

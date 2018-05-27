@@ -84,7 +84,6 @@ public class UserAction extends BaseHandler {
         List<User> list;
         list = this.userService.queryPagedEntityListForUser(filter, User.class);
         String gridJsonStr = this.toJsonStrForGrid(list, filter.getPageInfo(), this.getExcludedProperties(User.class));
-        logger.info(gridJsonStr);
         MesBaseUtil.writeJsonStr(response, gridJsonStr);
     }
 

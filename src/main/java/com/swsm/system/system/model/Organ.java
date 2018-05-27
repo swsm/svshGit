@@ -14,7 +14,6 @@ import java.util.Set;
  * <p>ClassName: Organ</p>
  * <p>Description: 部门Model</p>
  */
-@Data
 @Entity
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE, region = "SysOrganCache")
 @Table(name = "SYS_ORGAN")
@@ -116,5 +115,69 @@ public class Organ extends BaseModel {
         }
         return leaf;
     }
-    
+
+
+    public String getOrganName() {
+        return organName;
+    }
+
+    public void setOrganName(String organName) {
+        this.organName = organName;
+    }
+
+    public String getOrganCode() {
+        return organCode;
+    }
+
+    public void setOrganCode(String organCode) {
+        this.organCode = organCode;
+    }
+
+    public String getDutyUsername() {
+        return dutyUsername;
+    }
+
+    public void setDutyUsername(String dutyUsername) {
+        this.dutyUsername = dutyUsername;
+    }
+
+    public String getLdapOrganId() {
+        return ldapOrganId;
+    }
+
+    public void setLdapOrganId(String ldapOrganId) {
+        this.ldapOrganId = ldapOrganId;
+    }
+
+    public Integer getOrganOrder() {
+        return organOrder;
+    }
+
+    public void setOrganOrder(Integer organOrder) {
+        this.organOrder = organOrder;
+    }
+
+    public Organ getParentOrgan() {
+        return parentOrgan;
+    }
+
+    public void setParentOrgan(Organ parentOrgan) {
+        this.parentOrgan = parentOrgan;
+    }
+
+    public Set<Organ> getChildren() {
+        return children;
+    }
+
+    public void setChildren(Set<Organ> children) {
+        this.children = children;
+    }
+
+    public Set<User> getUserList() {
+        return userList;
+    }
+
+    public void setUserList(Set<User> userList) {
+        this.userList = userList;
+    }
 }

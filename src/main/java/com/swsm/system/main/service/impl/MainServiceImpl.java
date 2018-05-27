@@ -36,28 +36,18 @@ public class MainServiceImpl implements IMainService {
     @Qualifier("resourceDao")
     private ResourceDaoImpl resourceDao;
 
-    public Resource[] getResourcesByParentId(String parentId, String loginName) throws BaseException {
+    public Resource[] getResourcesByParentId(String parentId, String loginName) {
         if (loginName == null) {
             logger.debug("loginName is null");
             return new Resource[0];
         }
         if (!ActionConstants.ADMIN_USER.equals(loginName)) {
-            List<String> params;
-            params = new ArrayList<String>();
+            List<String> params = new ArrayList<>();
             if (ActionConstants.ROOT_NODE_ID.equals(parentId)) {
                 params.add("parentId");
             }
-            List<Resource> list;
-            list = this.resourceDao.getResourcesByParentId(loginName, parentId, params);
-            Resource[] array;
-            array = new Resource[list.size()];
-            int i = 0;
-            for (Object o : list) {
-                Resource r;
-                r = (Resource) o;
-                array[i] = r;
-                i++;
-            }
+            List<Resource> list = this.resourceDao.getResourcesByParentId(loginName, parentId, params);
+            Resource[] array  = list.toArray(new Resource[list.size()]);
             return array;
         } else {
             return this.getChildResource(parentId);
@@ -65,10 +55,9 @@ public class MainServiceImpl implements IMainService {
     }
 
     @Override
-    public Resource[] getChildResource(String parentId) throws BaseException {
+    public Resource[] getChildResource(String parentId) {
         List<Resource> list;
-        List<String> params;
-        params = new ArrayList<String>();
+        List<String> params = new ArrayList<>();
         if (ActionConstants.ROOT_NODE_ID.equals(parentId)) {
             params.add("parentId");
         }
@@ -104,8 +93,7 @@ public class MainServiceImpl implements IMainService {
      */
     @Override
     public Resource[] getHavResByLoginName(String loginName) throws BaseException {
-        List<String> params;
-        params = new ArrayList<String>();
+        List<String> params = new ArrayList<>();
         if (ActionConstants.ADMIN_USER.equals(loginName)) {
             params.add("loginName");
             List<Resource> list;

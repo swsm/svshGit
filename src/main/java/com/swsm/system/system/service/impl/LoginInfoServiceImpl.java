@@ -71,10 +71,8 @@ public class LoginInfoServiceImpl extends EntityServiceImpl<LoginInfo> implement
     }
     @Override
     public void saveLoginInfo(String userName, String ipAddress) {
-        User user;
-        user = this.userDao.getUserByUserName(userName);
-        LoginInfo info;
-        info = new LoginInfo();
+        User user = this.userDao.getUserByUserName(userName);
+        LoginInfo info = new LoginInfo();
         info.setUserName(userName);
         if (user != null) {
             info.setTrueName(user.getTruename());
@@ -170,12 +168,8 @@ public class LoginInfoServiceImpl extends EntityServiceImpl<LoginInfo> implement
 
     @Override
     public boolean checkUserIsLogin(String userName, String ipAddress) {
-        List<LoginInfo> list;
-        list = this.loginInfoDao.checkUserIsLogin(userName, ipAddress);
-        if (list.isEmpty()) {
-            return false;
-        }
-        return true;
+        List<LoginInfo> list = this.loginInfoDao.checkUserIsLogin(userName, ipAddress);
+        return !list.isEmpty();
     }
 
     @Override

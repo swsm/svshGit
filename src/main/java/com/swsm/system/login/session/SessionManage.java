@@ -108,7 +108,7 @@ public class SessionManage extends Jdf3SessionManage {
 
     @Override
     public void contextDestroyed(ServletContextEvent event) {
-        this.userSessions = new ConcurrentHashMap<String, HttpSession>();
+        this.userSessions = new ConcurrentHashMap<>();
     }
 
     @Override

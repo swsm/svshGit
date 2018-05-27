@@ -30,18 +30,12 @@ public class UserDaoImpl  extends BaseDaoImpl<User, String> {
      */
     @SuppressWarnings("unchecked")
     public User getUserByUserName(String userName) {
-        Map<String, Query> queryMap;
-        queryMap = new HashMap<String, Query>();
+        Map<String, Query> queryMap = new HashMap<>();
         queryMap.put("userName", new Query(Condition.EQ, userName));
-        StringBuilder hql;
-        hql = new StringBuilder("from User u");
+        StringBuilder hql= new StringBuilder("from User u");
         hql.append(" where u.username = :userName and u.delFlag = '0'");
-        List<User> list;
-        list = this.findByQuery(hql.toString(), queryMap).list();
-        if (list.isEmpty()) {
-            return null;
-        }
-        return list.get(0);
+        List<User> list = this.findByQuery(hql.toString(), queryMap).list();
+        return list.isEmpty() ? null : list.get(0);
     }
     
     /**
@@ -156,13 +150,9 @@ public class UserDaoImpl  extends BaseDaoImpl<User, String> {
 
     @SuppressWarnings("unchecked")
     public List<User> findUser(String loginName) {
-        String hql;
-        hql = "from User user where user.username=:username and user.delFlag='0'";
-        Map<String, Query> queryMap;
-        queryMap = new HashMap<String, Query>();
-        Query query;
-        query = new Query(Condition.EQ, loginName);
-        queryMap.put("username", query);
+        String hql = "from User user where user.username=:username and user.delFlag='0' and enabled='1' ";
+        Map<String, Query> queryMap = new HashMap<>();
+        queryMap.put("username", new Query(Condition.EQ, loginName));
         return findByQuery(hql, queryMap).list();
     }
 

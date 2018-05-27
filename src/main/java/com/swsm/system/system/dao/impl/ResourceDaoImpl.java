@@ -148,11 +148,9 @@ public class ResourceDaoImpl extends BaseDaoImpl<Resource, String> {
     }
     @SuppressWarnings("unchecked")
     public List<Resource> getResourcesByParentId(String loginName, String parentId, List<String> params) {
-        Map<String, Query> queryMap;
-        queryMap = new HashMap<String, Query>();
+        Map<String, Query> queryMap = new HashMap<>();
         queryMap.put("loginName", new Query(Condition.EQ, loginName));
-        String hql;
-        hql = " select distinct r from Resource r inner join fetch r.roleList role"
+        String hql = " select distinct r from Resource r inner join fetch r.roleList role"
             + " inner join role.userList user  where user.username=:loginName ";
         //2016-10-16：添加用户的删除标识为0
         hql += " and user.delFlag = '0' and r.belongSystem = '1'";
@@ -167,8 +165,7 @@ public class ResourceDaoImpl extends BaseDaoImpl<Resource, String> {
     }
     @SuppressWarnings("unchecked")
     public List<Resource> getChildResource(String parentId, List<String> params) {
-        Map<String, Query> map;
-        map = new HashMap<>();
+        Map<String, Query> map = new HashMap<>();
         String hql;
         if (params.contains("parentId")) {
             hql = "from Resource r where r.parentResource.id is null and r.resType in ('1','2') "
@@ -181,10 +178,8 @@ public class ResourceDaoImpl extends BaseDaoImpl<Resource, String> {
         return findEntityListByHql(hql, map);
     }
     public Object getChildCount(String parentId) {
-        String hql;
-        hql = "select count(*) from Resource where parentResource.id = :parentId and r.resType in ('1','2') ";
-        Map<String, Query> map;
-        map = new HashMap<String, Query>();
+        String hql = "select count(*) from Resource where parentResource.id = :parentId and r.resType in ('1','2') ";
+        Map<String, Query> map = new HashMap<>();
         map.put("parentId", new Query(Condition.EQ, parentId));
         return findByQuery(hql, map).uniqueResult();
     }
@@ -193,8 +188,7 @@ public class ResourceDaoImpl extends BaseDaoImpl<Resource, String> {
         if (params.contains("loginName")) {
             return findEntityListByHql("from Resource order by resOrder", null);
         } else {
-            Map<String, Query> map;
-            map = new HashMap<>();
+            Map<String, Query> map = new HashMap<>();
             map.put("loginName", new Query(Condition.EQ, loginName));
             return findEntityListByHql("select r from Resource r inner join fetch r.roleList role " +
                     "inner join role.userList user where user.username=:loginName order by r.resOrder", map);
@@ -202,14 +196,11 @@ public class ResourceDaoImpl extends BaseDaoImpl<Resource, String> {
     }
     @SuppressWarnings({ "unchecked", "deprecation" })
     public List<Resource> getResource(String userId) {
-        Map<String, Query> queryMap;
-        queryMap = new HashMap<>();
+        Map<String, Query> queryMap = new HashMap<>();
         queryMap.put("userId", new Query(Condition.EQ, userId));
-        String sql;
-        sql = "select C.RES_CODE as resCode from SYS_USER_ROLE t,SYS_ROLE_RESOURCE B,SYS_RESOURCE C "
+        String sql = "select C.RES_CODE as resCode from SYS_USER_ROLE t,SYS_ROLE_RESOURCE B,SYS_RESOURCE C "
                 + "where t.user_id=:userId and B.Role_Id=t.role_id and B.Res_Id=C.Pk_Id";
-        Scalar[] scalars ;
-        scalars = new Scalar[]{
+        Scalar[] scalars = new Scalar[]{
             new Scalar("resCode", StringType.INSTANCE)
         };
         return this.findEntityListBySql(sql, queryMap, scalars, Resource.class);

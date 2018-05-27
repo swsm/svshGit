@@ -43,23 +43,8 @@ public class LoginServiceImpl implements ILoginService {
 
     @Override
     public User findUser(String loginName) throws BaseException {
-        try {
-            List<User> list;
-            list = this.userDao.findUser(loginName);
-            if (list.isEmpty()) {
-                return null;
-            } else {
-                for(User u:list){
-                    if("1".equals(u.getEnabled())){
-                        return u;
-                    }
-                }
-                return list.get(0);
-            }
-        } catch (HibernateException e) {
-            logger.error(e.getMessage(), e);
-            throw new BaseException(e.getMessage());
-        }
+        List<User> list = this.userDao.findUser(loginName);
+        return list.isEmpty() ? null : list.get(0);
     }
 
     /**

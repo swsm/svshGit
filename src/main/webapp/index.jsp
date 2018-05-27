@@ -6,20 +6,6 @@
     <script id="microloader" data-app="2283f1d1-7985-4a4c-8900-c8a709d27651" type="text/javascript"
             src="bootstrap.js"></script>
     <link type="text/css" rel="stylesheet" href="resources/style/index.css">
-    <style>
-        tr.x-grid-record-red .x-grid-td {
-            background: #FF6347;
-        }
-
-        tr.x-grid-record-green .x-grid-td {
-            background: #93c47d;
-        }
-
-        iframe {
-            border: 0px solid #ffffff !important;
-        }
-    </style>
-
 </head>
 <body>
 <div id="loading">
@@ -30,8 +16,9 @@
 </div>
 </body>
 <script type="text/javascript">
+
     $(function () {
-        //定时请求刷新  
+        //定时请求刷新
         setTimeout(scheduleTask, 1000);
     });
     var scheduleTask = function () {
@@ -75,12 +62,10 @@
         });
     }
 
-
     window.history.forward(1);
     var currentLoginName = '${displayName}';
     var currentLoginUser = '${userName}';
     var organNames = '${organName}';
-    //alert(organName);
     var currentWorkNo = '${workNo}';
     var productJson = '${product}';
     /**

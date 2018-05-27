@@ -14,7 +14,6 @@ import java.util.Set;
  * <p>ClassName: Resource</p>
  * <p>Description: 资源Model</p>
  */
-@Data
 @Entity
 @Cache(usage = CacheConcurrencyStrategy.NONE,  region = "SysResourceCache")
 @Table(name = "SYS_RESOURCE")
@@ -171,4 +170,148 @@ public class Resource extends BaseModel implements java.io.Serializable {
         }
     }
 
+
+    public String getResName() {
+        return resName;
+    }
+
+    public void setResName(String resName) {
+        this.resName = resName;
+    }
+
+    public String getResCode() {
+        return resCode;
+    }
+
+    public void setResCode(String resCode) {
+        this.resCode = resCode;
+    }
+
+    public String getResType() {
+        return resType;
+    }
+
+    public void setResType(String resType) {
+        this.resType = resType;
+    }
+
+    public Integer getResOrder() {
+        return resOrder;
+    }
+
+    public void setResOrder(Integer resOrder) {
+        this.resOrder = resOrder;
+    }
+
+    public String getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(String enabled) {
+        this.enabled = enabled;
+    }
+
+    public String getBelongSystem() {
+        return belongSystem;
+    }
+
+    public void setBelongSystem(String belongSystem) {
+        this.belongSystem = belongSystem;
+    }
+
+    public String getModualFalg() {
+        return modualFalg;
+    }
+
+    public void setModualFalg(String modualFalg) {
+        this.modualFalg = modualFalg;
+    }
+
+    public boolean isChecked() {
+        return checked;
+    }
+
+    public void setChecked(boolean checked) {
+        this.checked = checked;
+    }
+
+    public int getChildCount() {
+        return childCount;
+    }
+
+    public void setChildCount(int childCount) {
+        this.childCount = childCount;
+    }
+
+    public String getParentId() {
+        return parentId;
+    }
+
+    public void setParentId(String parentId) {
+        this.parentId = parentId;
+    }
+
+    public String getParentIdStr() {
+        return parentIdStr;
+    }
+
+    public void setParentIdStr(String parentIdStr) {
+        this.parentIdStr = parentIdStr;
+    }
+
+    public String getDbChecked() {
+        return dbChecked;
+    }
+
+    public void setDbChecked(String dbChecked) {
+        this.dbChecked = dbChecked;
+    }
+
+    public Set<Role> getRoleList() {
+        return roleList;
+    }
+
+    public void setRoleList(Set<Role> roleList) {
+        this.roleList = roleList;
+    }
+
+    public Resource getParentResource() {
+        return parentResource;
+    }
+
+    public void setParentResource(Resource parentResource) {
+        this.parentResource = parentResource;
+    }
+
+    public Set<Resource> getChildResList() {
+        return childResList;
+    }
+
+    public void setChildResList(Set<Resource> childResList) {
+        this.childResList = childResList;
+    }
+
+    public Set<Resource> getChildren() {
+        return children;
+    }
+
+    public void setChildren(Set<Resource> children) {
+        this.children = children;
+    }
+
+    public String getPreResName() {
+        return preResName;
+    }
+
+    public void setPreResName(String preResName) {
+        this.preResName = preResName;
+    }
+
+    public String getIconCls() {
+        return iconCls;
+    }
+
+    public void setIconCls(String iconCls) {
+        this.iconCls = iconCls;
+    }
 }

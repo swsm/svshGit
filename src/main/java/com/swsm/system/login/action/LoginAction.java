@@ -93,10 +93,8 @@ public class LoginAction {
     @ResponseBody
     @RequestMapping(value = "/main/checkUserIsLogin.mvc")
     public boolean checkUserIsLogin(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        String userName;
-        userName = request.getParameter("loginName");
-        String localIp;
-        localIp = this.getIpAddress(request);
+        String userName = request.getParameter("loginName");
+        String localIp = this.getIpAddress(request);
         return this.loginInfoService.checkUserIsLogin(userName, localIp);
     }
 
@@ -218,32 +216,17 @@ public class LoginAction {
     @RequestMapping(value = "/main/login.mvc")
     @ResponseBody
     public Map<String, String> login(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        ModelAndView view;
-        view = new ModelAndView();
-        String loginName;
-        loginName = request.getParameter("loginName");
-        String loginPassword;
-        loginPassword = request.getParameter("loginPassword");
-        User user = null;
-        try {
-            user = this.loginService.findUser(loginName);
-        } catch (BaseException e) {
-            throw new Exception(e.getMessage(), e);
-        }
-        Map<String, String> map;
-        map = new HashMap<String, String>();
+        ModelAndView view = new ModelAndView();
+        String loginName = request.getParameter("loginName");
+        String loginPassword = request.getParameter("loginPassword");
+        User user = this.loginService.findUser(loginName);
+        Map<String, String> map = new HashMap<>();
         if (user == null) {
             map.put("msg", LoginResult.LOGINNAMENOTFOUND.getContext());
             return map;
         }
-        if("0".equals(user.getEnabled())){
-            map.put("msg", LoginResult.LOGINNAMEFORBIDDEN.getContext());
-            return map;
-        }
-        String password;
-        password = user.getPassword();
-        String pass;
-        pass = MD5Util.getDigest(loginPassword);
+        String password = user.getPassword();
+        String pass = MD5Util.getDigest(loginPassword);
         if (!pass.equals(password)) {
             view.setViewName("login");
             view.addObject("msg", LoginResult.ERRORPASSWORD.getContext());
@@ -253,23 +236,10 @@ public class LoginAction {
             }
         }
         String[] resCodes = new String[0];
-//        try {
-//            Resource[] res;
-//            res = this.mainService.getHavResByLoginName(user.getUsername());
-//            resCodes = new String[res.length];
-//            for (int i = 0; i < res.length; i++) {
-//                resCodes[i] = res[i].getResCode();
-//            }
-//        } catch (BaseException e) {
-//            logger.warn(e.getMessage(), e);
-//            resCodes = new String[0];
-//        }
-        LoginUtil.loadSession(resCodes, user, user.getOrganList(), user.getRoleList(), request, response);
+        LoginUtil.loadSession(resCodes, user, user.getOrganList(), user.getRoleList(), request);
         map.put("msg", LoginResult.LOGINOK.getContext());
-        String localIp;
-        localIp = this.getIpAddress(request);
+        String localIp = this.getIpAddress(request);
         this.accessLogService.insertAccessLog(localIp, "登录", "登录系统", user.getTruename(), user.getId());
-        //2017-3-4:向用户登录信息表中添加一条记录
         this.loginInfoService.saveLoginInfo(loginName, localIp);
         return map;
     }
@@ -385,7 +355,7 @@ public class LoginAction {
             }
         }
         Map<String, String> map;
-        map = new HashMap<String, String>();
+        map = new HashMap<>();
         map.put("msg", LoginState.LOGOUT.getContext());
         String localIp;
         localIp = this.getIpAddress(request);
@@ -417,8 +387,7 @@ public class LoginAction {
             page = "login";
         } else {
             if ("index".equals(page)) {
-                UserSession userSession;
-                userSession = SessionManage.getSessionManage().getUserSession(request.getSession(false));
+                UserSession userSession = SessionManage.getSessionManage().getUserSession(request.getSession(false));
                 view.addObject("displayName", userSession.getDispName());
                 view.addObject("organName", userSession.getOrganName());
                 view.addObject("userName", userSession.getUserName());
@@ -429,10 +398,8 @@ public class LoginAction {
                     if (product == null) {
                         product = new ProductModel();
                     }
-                    String productJson;
-                    productJson = JSON.toJSONString(product);
-                    Map<String, String> varMap;
-                    varMap = product.getVarMap();
+                    String productJson = JSON.toJSONString(product);
+                    Map<String, String> varMap = product.getVarMap();
                     if (varMap != null) {
                         for (Map.Entry<String, String> entry : varMap.entrySet()) {
                             userSession.putVar(entry.getKey(), entry.getValue());

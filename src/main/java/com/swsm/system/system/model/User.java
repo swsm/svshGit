@@ -15,7 +15,6 @@ import java.util.Set;
  * <p>ClassName: User</p>
  * <p>Description: 用户Model</p>
  */
-@Data
 @Entity
 @Table(name = "sys_user")
 public class User extends BaseModel implements java.io.Serializable {
@@ -209,6 +208,128 @@ public class User extends BaseModel implements java.io.Serializable {
         }
         return null;
     }
-    
 
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getTruename() {
+        return truename;
+    }
+
+    public void setTruename(String truename) {
+        this.truename = truename;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getWorkNo() {
+        return workNo;
+    }
+
+    public void setWorkNo(String workNo) {
+        this.workNo = workNo;
+    }
+
+    public String getLdapUserId() {
+        return ldapUserId;
+    }
+
+    public void setLdapUserId(String ldapUserId) {
+        this.ldapUserId = ldapUserId;
+    }
+
+    public String getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(String enabled) {
+        this.enabled = enabled;
+    }
+
+    public String getRoleNameStr() {
+        return roleNameStr;
+    }
+
+    public void setRoleNameStr(String roleNameStr) {
+        this.roleNameStr = roleNameStr;
+    }
+
+    public String getWechatName() {
+        return wechatName;
+    }
+
+    public void setWechatName(String wechatName) {
+        this.wechatName = wechatName;
+    }
+
+    public Set<Role> getRoleList() {
+        return roleList;
+    }
+
+    public void setRoleList(Set<Role> roleList) {
+        this.roleList = roleList;
+    }
+
+    public void setOrganName(String organName) {
+        this.organName = organName;
+    }
+
+    public void setOrganId(String organId) {
+        this.organId = organId;
+    }
+
+    public void setOrganCode(String organCode) {
+        this.organCode = organCode;
+    }
+
+    public Set<Organ> getOrganList() {
+        return organList;
+    }
+
+    public void setOrganList(Set<Organ> organList) {
+        this.organList = organList;
+    }
 }

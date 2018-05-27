@@ -34,8 +34,7 @@ public class MesJsonUtil {
             excludes = Collections.emptyMap();
         }
         String jsonStr = null;
-        Map<String, Object> causeMaps;
-        causeMaps = new HashMap<String, Object>();
+        Map<String, Object> causeMaps = new HashMap<>();
         if (list == null || list.isEmpty()) {
             causeMaps.put("total", 0);
             causeMaps.put("rows", Collections.emptyList());

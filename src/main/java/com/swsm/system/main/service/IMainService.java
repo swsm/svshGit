@@ -23,7 +23,7 @@ public interface IMainService {
      * @return 资源列表
      * @throws BaseException 异常
      */
-    public Resource[] getChildResource(String parnetId) throws BaseException;
+    public Resource[] getChildResource(String parnetId);
 
     /**
      * 
@@ -33,10 +33,8 @@ public interface IMainService {
      * 
      * @param parnetId 父节点
      * @param loginName 当前用户信息
-     * @return Resource[] 拥有权限的资源集合
-     * @throws BaseException 异常
      */
-    public Resource[] getResourcesByParentId(String parnetId, String loginName) throws BaseException;
+    public Resource[] getResourcesByParentId(String parnetId, String loginName);
 
     /**
      * 

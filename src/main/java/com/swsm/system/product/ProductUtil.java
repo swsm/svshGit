@@ -31,31 +31,20 @@ public class ProductUtil {
      * @throws BaseException 异常
      */
     public static ProductModel getProduct() throws BaseException {
-        String sysHomePath;
-        sysHomePath = SysHome.getSysHomePath();
+        String sysHomePath = SysHome.getSysHomePath();
         if (sysHomePath == null) {
             return null;
         }
-        String fileName;
-        fileName = sysHomePath + File.separator + "product.xml";
-        String printName;
-        printName = XmlReader.getValueByPath(fileName, "/product/vendor/print-name");
-        String printLogoUrl;
-        printLogoUrl = XmlReader.getValueByPath(fileName, "/product/vendor/printLogo-url");
-        String vendorName;
-        vendorName = XmlReader.getValueByPath(fileName, "/product/vendor/vendor-name");
-        String logoUrl;
-        logoUrl = XmlReader.getValueByPath(fileName, "/product/vendor/logo-url");
-        String sysName;
-        sysName = XmlReader.getValueByPath(fileName, "/product/sys/sys-name");
-        String sysVersion;
-        sysVersion = XmlReader.getValueByPath(fileName, "/product/sys/sys-version");
-        String sysMaking;
-        sysMaking = XmlReader.getValueByPath(fileName, "/product/sys/sys-make");
-        String erpFlag;
-        erpFlag = XmlReader.getValueByPath(fileName, "/product/erp/erp-flag");
-        ProductModel product;
-        product = new ProductModel();
+        String fileName = sysHomePath + File.separator + "product.xml";
+        String printName = XmlReader.getValueByPath(fileName, "/product/vendor/print-name");
+        String printLogoUrl = XmlReader.getValueByPath(fileName, "/product/vendor/printLogo-url");
+        String vendorName = XmlReader.getValueByPath(fileName, "/product/vendor/vendor-name");
+        String logoUrl = XmlReader.getValueByPath(fileName, "/product/vendor/logo-url");
+        String sysName = XmlReader.getValueByPath(fileName, "/product/sys/sys-name");
+        String sysVersion = XmlReader.getValueByPath(fileName, "/product/sys/sys-version");
+        String sysMaking = XmlReader.getValueByPath(fileName, "/product/sys/sys-make");
+        String erpFlag = XmlReader.getValueByPath(fileName, "/product/erp/erp-flag");
+        ProductModel product = new ProductModel();
         product.setPrintLogoUrl(printLogoUrl);
         product.setPrintName(printName);
         product.setLogoUrl(logoUrl);
@@ -64,16 +53,10 @@ public class ProductUtil {
         product.setSysVersion(sysVersion);
         product.setVendorName(vendorName);
         product.setErpFlag(erpFlag);
-        Node[] nodes;
-        nodes = XmlReader.getNodesByPath(fileName, "/product/vars/var");
-        Map<String, String> varMap;
-        varMap = new HashMap<String, String>();
+        Node[] nodes = XmlReader.getNodesByPath(fileName, "/product/vars/var");
+        Map<String, String> varMap = new HashMap<>();
         for (Node node : nodes) {
-            String varName;
-            varName = node.valueOf("@name");
-            String varValue;
-            varValue = node.valueOf("@value");
-            varMap.put(varName, varValue);
+            varMap.put(node.valueOf("@name"), node.valueOf("@value"));
         }
         product.setVarMap(varMap);
         return product;

@@ -11,7 +11,6 @@ import java.util.Set;
  * <p>ClassName: Role</p>
  * <p>Description: 角色Model</p>
  */
-@Data
 @Entity
 @Table(name = "SYS_ROLE")
 public class Role extends BaseModel implements java.io.Serializable {
@@ -82,4 +81,51 @@ public class Role extends BaseModel implements java.io.Serializable {
     }
 
 
+    public String getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
+    }
+
+    public String getRoleType() {
+        return roleType;
+    }
+
+    public void setRoleType(String roleType) {
+        this.roleType = roleType;
+    }
+
+    public String getIgnoreDecesion() {
+        return ignoreDecesion;
+    }
+
+    public void setIgnoreDecesion(String ignoreDecesion) {
+        this.ignoreDecesion = ignoreDecesion;
+    }
+
+    public String getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(String enabled) {
+        this.enabled = enabled;
+    }
+
+    public Set<User> getUserList() {
+        return userList;
+    }
+
+    public void setUserList(Set<User> userList) {
+        this.userList = userList;
+    }
+
+    public Set<Resource> getResList() {
+        return resList;
+    }
+
+    public void setResList(Set<Resource> resList) {
+        this.resList = resList;
+    }
 }
