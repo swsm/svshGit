@@ -1,6 +1,7 @@
 package com.swsm.system.sequence.model;
 
 import com.core.entity.BaseModel;
+import lombok.Data;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,9 +13,10 @@ import javax.persistence.Table;
  * 
  * @author codegen
  */
+@Data
 @Entity
 @Table(name = "SYS_SEQUENCE")
-public class SequenceModel extends BaseModel {
+public class SequenceModel extends BaseModel implements java.io.Serializable {
 
 
     /**
@@ -43,66 +45,4 @@ public class SequenceModel extends BaseModel {
      */
     @Column(name = "SECOND_CODE")
     private String secondCode = null;
-
-    /**
-     * 设置日期
-     * 
-     * @param seqDate 日期
-     */
-    public void setSeqDate(String seqDate) {
-        this.seqDate = seqDate;
     }
-
-    /**
-     * 获得日期
-     * 
-     * @return 日期
-     */
-    public String getSeqDate() {
-        return this.seqDate;
-    }
-
-    /**
-     * 设置最大编号
-     * 
-     * @param maxSeq 最大编号
-     */
-    public void setMaxSeq(String maxSeq) {
-        this.maxSeq = maxSeq;
-    }
-
-    /**
-     * 获得最大编号
-     * 
-     * @return 最大编号
-     */
-    public String getMaxSeq() {
-        return this.maxSeq;
-    }
-
-    /**
-     * 设置表名称
-     * 
-     * @param tableName 表名称
-     */
-    public void setTableName(String tableName) {
-        this.tableName = tableName;
-    }
-
-    /**
-     * 获得表名称
-     * 
-     * @return 表名称
-     */
-    public String getTableName() {
-        return this.tableName;
-    }
-
-    public String getSecondCode() {
-        return this.secondCode;
-    }
-
-    public void setSecondCode(String secondCode) {
-        this.secondCode = secondCode;
-    }
-}
