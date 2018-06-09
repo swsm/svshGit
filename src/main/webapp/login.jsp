@@ -1,5 +1,5 @@
 <%@ page language="java"
-         import="java.util.*,com.swsm.system.login.session.LoginResult"
+         import="java.util.*,com.swsm.login.session.LoginResult"
          pageEncoding="UTF-8" %>
 <%
     String path = request.getContextPath();

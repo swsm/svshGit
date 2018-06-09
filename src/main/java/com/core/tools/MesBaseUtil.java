@@ -4,7 +4,7 @@ import com.core.entity.BaseModel;
 import com.core.service.impl.EntityServiceImpl;
 import com.core.tools.file.IOUtil;
 import com.core.tools.format.StringHelper;
-import com.swsm.system.constant.CommonConstants;
+import com.swsm.constant.CommonConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

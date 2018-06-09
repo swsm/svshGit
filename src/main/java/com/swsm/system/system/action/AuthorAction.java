@@ -1,8 +1,8 @@
 package com.swsm.system.system.action;
 
-import com.swsm.system.constant.ActionConstants;
-import com.swsm.system.login.session.SessionManage;
-import com.swsm.system.login.session.UserSession;
+import com.swsm.constant.ActionConstants;
+import com.swsm.login.session.SessionManage;
+import com.swsm.login.session.UserSession;
 import com.swsm.system.system.service.IAuthorService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

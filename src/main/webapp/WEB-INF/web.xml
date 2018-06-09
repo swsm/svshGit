@@ -45,7 +45,7 @@
   </listener>
 
   <listener>
-    <listener-class>com.swsm.system.login.session.SessionManage</listener-class>
+    <listener-class>com.swsm.login.session.SessionManage</listener-class>
   </listener>
 
   <!--  字符集过滤  -->
@@ -69,7 +69,7 @@
     <filter>
         <description>session filter</description>
         <filter-name>sessionFilter</filter-name>
-        <filter-class>com.swsm.system.login.session.SessionFilter</filter-class>
+        <filter-class>com.swsm.login.session.SessionFilter</filter-class>
         <init-param>
             <param-name>login</param-name>
             <param-value>login</param-value>
@@ -87,7 +87,7 @@
   <!-- read the precompressed gzip js file-->
   <filter>
     <filter-name>gzip</filter-name>
-    <filter-class>com.swsm.system.login.session.GzipFilter</filter-class>
+    <filter-class>com.swsm.login.session.GzipFilter</filter-class>
   </filter>
 
   <filter-mapping>
