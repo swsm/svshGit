@@ -72,8 +72,7 @@ public class SessionManage extends Jdf3SessionManage {
      * @return 用户session信息
      */
     public UserSession getUserSession(HttpSession session) {
-        HttpSession s;
-        s = this.userSessions.get(session.getId());
+        HttpSession s = this.userSessions.get(session.getId());
         if (s != null) {
             UserSession userSession;
             userSession = (UserSession) s.getAttribute(Jdf3SessionManage.USERSESSION);
@@ -118,8 +117,7 @@ public class SessionManage extends Jdf3SessionManage {
     @Override
     public void sessionDestroyed(HttpSessionEvent se) {
         logger.info("Session Destroyed:" + se.getSession().getId());
-        String sessionId;
-        sessionId = se.getSession().getId();
+        String sessionId = se.getSession().getId();
         UserSession userSession;
         userSession = (UserSession) se.getSession().getAttribute(Jdf3SessionManage.USERSESSION);
         if (userSession != null && userSession.getLoginState() == LoginState.LOGIN) {
